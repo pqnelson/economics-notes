@@ -577,6 +577,7 @@ reasoning, without manipulating a model at hand. Proceed /very slowly!/
   thus capable of being "recurrent" in the sense defined in \sect[[section_21][21]])
   is the one equal to the rate of profits corresponding with
   zero wage. And /that/ is the "balancing" ratio.
+#+NAME: defn_max_rate_of_profits
 - *Definition.* The "*Maximum Rate of Profits*" is the rate of profits
   as it would be if the whole national income went to profits, and we
   denote it by /R/.
@@ -606,10 +607,10 @@ reasoning, without manipulating a model at hand. Proceed /very slowly!/
     [[https://en.wikipedia.org/wiki/Num%C3%A9raire][Numeraire]] exists.
 *** 24. The perfect Composite Commodity
 #+NAME: section_24
-- It's doubtful any single commodity posses the desired properties.
-- A *mixture* of commodities, or a "composite commodity", would do
-  equally well...or even better, since it could be "blended" to suit our
-  requirements.
+- It's doubtful any /single/ commodity posses the desired properties.
+- A *mixture* of commodities, or a "composite commodity", i.e. a linear
+  combination of commodities, would do equally well...or even better,
+  since it could be "blended" (the coefficients picked) to suit our needs.
   - Economists use the term [[https://en.wikipedia.org/wiki/Market_basket][Basket]] instead of "composite commodity".
 - The mixture of commodities needs to consists of the same commodities
   as its aggregate means of production...i.e., if we take our
@@ -836,10 +837,117 @@ reasoning, without manipulating a model at hand. Proceed /very slowly!/
   to 5% of the value of the actual means of production.
 *** 33. Construction of the Standard commodity: the /q/-system
 #+NAME: section_33
+- *Problem.* Constructing a Standard commodity amounts to finding a set
+  of /k/ suitable multipliers, which Sraffa calls /q_{a}/, /q_{b}/, ...,
+  /q_{k}/, applied respectively to the production equations of
+  commodities 'a', 'b', ..., 'k'.
+  
+  These multipliers must be such that the resulting quantities of the
+  various commodities will bear the same proportions to one another on
+  the right hand side of the equations (as products) as they do on the
+  aggregate left-hand side (as means of production)
+  - In other words, after dilating both sides by these multipliers, the
+    ratio of the sum of the /a^{th}/ column to the output /q_{a}A/ is
+    the same as the sum of the /b^{th}/ column to the output /q_{b}B/,
+    or any other such ratio.
+- *Definition.* This implies the percentage which the output of a
+  commodity exceeds the quantity of it entering the aggregate means of
+  production is the same for all commodities. This percentage we have
+  called the "*Standard ratio*" and we have denoted it by the letter /R/.
+- As good mathematicians know, such properties take the form of
+  equations. What's our equations?
+  
+  We have a system of equations, *arranged in a different order* which
+  looks like: 
+
+  #+BEGIN_VERSE
+  (/A_{a}q_{a}/ + /A_{b}q_{b}/ + ... + /A_{k}q_{k}/)(1 + /R/) = /Aq_{a}/
+  (/B_{a}q_{a}/ + /B_{b}q_{b}/ + ... + /B_{k}q_{k}/)(1 + /R/) = /Bq_{a}/
+  . . . . . . . . . . . . . . . . . . . . . . .
+  (/K_{a}q_{a}/ + /K_{b}q_{b}/ + ... + /K_{k}q_{k}/)(1 + /R/) = /Kq_{a}/
+  #+END_VERSE
+
+  This system of equations Sraffa calls the "*/q/-System*".
+  - *Remark.* Observe the left hand side of each equation is the
+    aggregate input, suitably dilated. The right hand side is the
+    dilated output.
+  - *Remark.* This system is under-determined, since there are /k/
+    multipliers and /R/...but only /k/ equations.
+- To make sure the /q/-equations have a unique solution, we need to add
+  an additional equation specifying the labor in each sector (suitably
+  dilated) adds up to unity:
+
+  #+BEGIN_VERSE
+  /L_{a}q_{a}/ + /L_{b}q_{b}/ + ... + /L_{k}q_{k}/ = 1.
+  #+END_VERSE
+
+  This gives us /k/ + 1 independent equations determining the /k/
+  multipliers and /R/.
+
 *** 34. Standard national income as unit
 #+NAME: section_34
+- Suppose we solve our /q/ system of equations.
+  - *Notation:* Sraffa refers to the solutions as /q'_{a}/, /q'_{b}/,
+    ..., /q'_{k}/ --- primed /q/'s refer to the particular fixed solutions.
+- We apply these equations to the equations of production system
+  \sect[[section_11][11]], and thus transform it into a Standard system as follows:
+
+  #+BEGIN_VERSE
+  /q'_{a}/ [(/A_{a}p_{a}/ + /B_{a}p_{b}/ + ... + /K_{a}p_{k}/)(1 + /r/) + (/L_{a}w/)] = /q'_{a}Ap_{a}/
+  /q'_{b}/ [(/A_{b}p_{a}/ + /B_{b}p_{b}/ + ... + /K_{b}p_{k}/)(1 + /r/) + (/L_{a}w/)] = /q'_{b}Bp_{b}/
+   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+  /q'_{k}/ [(/A_{k}p_{a}/ + /B_{k}p_{b}/ + ... + /K_{k}p_{k}/)(1 + /r/) + (/L_{a}w/)] = /q'_{k}Kp_{k}/
+  #+END_VERSE
+
+- From this, we derive the Standard national income which we adopt as
+  the unit of wages and prices in the original system of production.
+- The unit equation of \sect[[section_12][12]] is therefore replaced by the following
+  (where the /q/'s stand for known numbers, since they're primed, and the
+  /p/'s are the unknowns):
+
+  #+BEGIN_VERSE
+  [(/q'_{a}A/) - (/q'_{a}A_{a}/ + ... + /q'_{k}A_{k}/)] /p_{a}/
+  + [(/q'_{b}B/) - (/q'_{a}B_{a}/ + ... + /q'_{k}B_{k}/)] /p_{b}/
+  + ...
+  + [(/q'_{k}K/) - (/q'_{a}K_{a}/ + ... + /q'_{k}K_{k}/)] /p_{k}/
+  = 1
+  #+END_VERSE
+
+- The composite commodity given by this unit equation (\Delta /A/ +
+  ... + \Delta /K/) is the Standard of wages and prices we have been
+  seeking since \sect[[section_23][23]].
 *** 35. Non-Basics excluded
 #+NAME: section_35
+- We excluded non-basic products from the system, so it's impossible they could influence...anything. The multiplier appropriate for their equations can only be zero.
+  - The same is true for non-basics which, while not entering the means
+    of production for commodities in general, but are used in producing
+    non-basics...including themselves (e.g., special raw materials for
+    luxury goods; luxury animals reproduce themselves; etc.).
+  - Insofar as a commodity of this kind entered the production of
+    non-basic products of this type, it follows the latter's fate having
+    zero for its multiplier.
+  - NB: the ratio of its quantity as a product to its quantity as means
+    of production would be exclusively determined through its own
+    production equation. Therefore it would in general be unrelated to /R/
+    and be incompatible with the Standard system.
+    
+    The multiplier appropriate to it would therefore also be zero. 
+  - Sraffa has a footnote stating: "Strictly speaking the multiplier
+    would be zero for every possible value of /R/ except the one that was
+    equal to the ratio of the quantity of that non-basic in the net
+    product to its quantity in the means of production. This is a freak
+    case of the type referred to in Appendix B: at that particular value
+    of /R/ all prices would be zero in terms of the non-basic in
+    question."
+- We may simplify the discussion by assuming all non-basic equations are
+  eliminated at the outset so only basic industries come under
+  consideration.
+- NB: the absence of non-basic industries from the Standard system does
+  not prevent the latter from being equivalent in its effects to the
+  original system since (as we have seen in \sect[[section_6][6]]) their presence or
+  absence makes no difference to the determination of prices and of the
+  rate of profits. 
+
 ** Ch. 5. Uniqueness of the Standard System
 *** 36. Introductory
 #+NAME: section_36
@@ -849,38 +957,35 @@ reasoning, without manipulating a model at hand. Proceed /very slowly!/
 #+NAME: section_37
 - We may show this using an "imaginary experiment" (Sraffa's term for a
   "thought experiment"?).
-- It involves two types of alternating steps:
-  1. Changing the proportions of the industries;
-  2. Reducing the same ratio the quantities produced by all industries,
-     while leaving unchanged the quantities used as means of production.
-- We adjust the proportions of all industries in our system such that:
-  every basic commodity produces more than strictly necessary for
-  replacement. (I.e., every basic commodity has surplus.)
-  - Is this always possible mathematically?
-- Suppose we gradually reduce the product of all industries, slowly and
-  successively in small steps...but without interfering with the
-  quantities of labor and means of production they employ.
-  - I honestly don't see how this is done. We decrease the output
-    without changing the input?
-- When the cuts reduce production for any one commodity to the minimum
-  level required for replacement, we re-adjust the proportions of the
-  industries so there's a surplus for each product again (while keeping
-  onstant the quantity of labor employed in the aggregate.)
-  
-  We can always do this, provided there exists a surplus for some
-  commodities and deficit of none
-- We continue alternatng between cuts and re-establishing a surplus for
-  each product until we reach the point where products have been reduced
-  such that all-round replacement is just possible without leaving
-  anything as surplus.
-  - *Remark.* Notice this is an /algorithm/! Sraffa's mathematical
-    approach may be described as /algorithmic/ or /constructive/ (the
-    latter for mathematicians, the former for everyone else).
+- *Algorithm.* We can generate the standard system constructively. It involves two types of alternating steps:
+  (1) Changing the proportions of the industries; (2) Reducing the same ratio the quantities produced by all industries, while leaving unchanged the quantities used as means of production.
+  - *Step 1.* We adjust the proportions of all industries in our system such that:
+    every basic commodity produces more than strictly necessary for
+    replacement. (I.e., every basic commodity has surplus.)
+    - Is this always possible mathematically? Well, yes, that was what
+      \sect[[section_25][25]] was all about!
+    - NB: this step is ambiguous, or more precisely allows some freedom
+      in picking /how/ we adjust the proportions. Unfortunately, this
+      freedom spoils the proof as an algorithm we could naively
+      implement on the computer, but can be remedied by picking some
+      arbitrary scheme.
+  - *Step 2.* 
+    Suppose we gradually reduce the product of all industries, slowly and
+    successively in small steps...but without interfering with the
+    quantities of labor and means of production they employ.
+    - I honestly don't see how this is done. We decrease the output
+      without changing the input?
+    - If we examine \sect[[section_26][26]], we see an example of this "enlarging process".
+  - *Step 3.* If the products have been reduced to such an extent that
+    all-round replacement is just possible without leaving anything as
+    surplus, we terminate the algorithm. Otherwise, we go back to step 1.
+  - *Output.* The proportions attained by the industries are the
+    proportions of the Standard system.
 - With increasing the quantity produced in each sector by a uniform
   rate, we are able to restore the original conditions. We do not
   disturb the proportions to which the industries have been
   brought. The uniform rate restoring the original conditions of
-  produciton is /R/, and the proportions attained by the industries are
+  production is /R/, and the proportions attained by the industries are
   the Standard proportions!
 *** 38. Why question of uniqueness arises
 #+NAME: section_38
@@ -1068,8 +1173,95 @@ multipliers! We will enumerate the steps in Sraffa's proof...
 
 *** 43. Standard product replace by equivalent quantity of labor
 #+NAME: section_43
+- The Standard commodity has been a purely auxiliary construction. We
+  can present the essential element of the mechanism without having to
+  resort to the Standard commodity.
+- What do we know? If we make the Standard net product equal to unity
+  (i.e., set it to 1), so we measure wage in terms of it, then a
+  relation of proportionality is established between "wage deductions"
+  and "enlarging the rate of profits" (quotes added to indicate the
+  two quantities). Its in accordance with the expression 
+  
+  #+BEGIN_VERSE
+  /r/ = /R'_{}/ (1 - /w/)
+  #+END_VERSE
+  
+  where /R'_{}/ is the ratio of the Standard net product to its means of
+  production, which results from the /q/ equations.
+- The proportion is reversible.
+- If we make it a condition of the system that /w/ and /r/ should obey this
+  sort of rule, the wage and commodity prices are then consequently
+  expressed in Standard net product...without need of defining its
+  composition (since no other unit can fulfill the rule)!
+- How to do this? We have to substitute for the equation making Standard
+  net product equal to unity (in \sect[[section_34][34]]), the relation linking /w/ and /r/ with
+  /R'_{}/.
+  - To find /R'_{}/ (i.e., the value of /R/ corresponding to positive
+    multiplier and prices) we don't have to solve the /q/-equations. We can
+    find it as the Maximum rate of profits from the previous equations, by
+    making /w/ = 0.
+  - Sraffa capitalizes "Maximum" in "Maximum rate of profit" here,
+    though I don't know if it's significant or a typo.
+- This condition is sufficient to ensure wage and commodity-prices are
+  expressed in terms of the Standard net product. (Sraffa notes how
+  amazing it is we can use a standard without knowing what it consists of).
+- There exists a more tangible measure for prices of commodities, making
+  it possible to displace the Standard net product. The measure is "the
+  quantity of labor which can be purchased by the Standard net product."
+  - As soon as we have fixed the rate of profits, without knowing the
+    prices of commodity (nor needing to), a parity is established between
+    the Standard net product and a quantity of labor which depends only on
+    the rate of profits.
+  - The resulting prices of commodities can be indifferently regarded as
+    expressed in either (a) the Standard net product, or (b) the quantity
+    of labor --- which at the given rate of profits --- is known to be
+    equivalent to it.
+  - This quantity of labor will inversely vary with the Standard wage
+    (/w/) and directly with the rate of profits.
+  - If the annual labor of this system is taken as unit, this equivalent
+    quantity of labor (derived from the relation above) is
+    \begin{equation}
+    \frac{1}{w} = \frac{R'}{R' - r}
+    \end{equation}
+- All the properties for "an invariant standard of value" (as described
+  in \sect[[section_23][23]]) are found in the variable quantity of labor, which varies
+  according to a simple rule independent of prices: this unit of
+  measurement increases in magnitude with the fall of the wage,
+  i.e. with the rise of the rate of profits. It varies from (a)
+  equaling the annual labor of the system when the rate of profits
+  vanish, to (b) without limit as the rate of profits approaches its
+  maximum value /R'_{}/.
+- The remaining use of the Standard net product is as the medium which
+  wage is expressed. Sraffa notes in this case "there seems to be no way
+  of replacing it."
+  - If we wish to eliminate it altogether, we must cease to regard /w/ as
+    an expression for wage and treat is as a pure number which helps
+    define the quantity of labor which constitutes the unit of prices at
+    the given rate of profits.
+  - Then the prices of commodities being expressed in terms of such
+    quantity of labor, we can find its wage in terms of any commodity
+    through taking the reciprocal of the price for that commodity.
 *** 44. Wage or rate of profits as independent variable
 #+NAME: section_44
+- The last steps of the preceding argument led us to reverse the
+  practice followed from the outset: treating the wage rater than the
+  rate of profits as the independent variable (or "given" quantity).
+- The choice of wage as independent variable was due to its being there
+  as consisting of specified necessaries independent of prices or rate
+  of profits.
+- As soon as the possibility of variations in the division of product is
+  admitted, this consideration loses its force.
+- When wage is regarded as "given" in terms of a more-or-less abstract
+  standard --- and does not acquire definite meaning until prices of
+  commodities are determined --- the position is reversed.
+  - The rate of profits (as a ratio) has a significance which is
+    independent of any prices, and can well be "given" before prices are
+    fixed.
+  - It is accordingly susceptible of being determined from outside the
+    system of production, in particular by the level of money rates of
+    interest.
+- *Convention.* The following sections will treat the rate of profits as
+  the independent variable.
 ** Ch. 6. Reduction to Dated Labor
 *** 45. Cost of production aspect
 #+NAME: section_45
