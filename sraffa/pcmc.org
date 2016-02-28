@@ -370,12 +370,12 @@ reasoning, without manipulating a model at hand. Proceed /very slowly!/
 - We now give the wage /w/ successive values ranging from 1 to 0: these
   represent fractions of the national income
   (compare \sect[[section_10][10]] and \sect[[section_12][12]]).
-- The object: observe the effect of changes in the wage on rate of
-  profits, and on the prices of individual commodities...on the
-  assumption the methods of production remain unchanged.
+- Objective: determine how changes in the wage affects the rate of
+  profits, and the prices of individual commodities...assuming the
+  methods of production remain unchanged.  
 *** 14. Values when whole National Income goes to Wages
 #+NAME: section_14
-- When we make /w/ equal to 1, the whole national income goes to wages
+- When we make /w/ = 1, the whole national income goes to wages
   and /r/ is eliminated.
 - We thus revert to the systems of equations we /began/ with! The
   difference being the quantities of labor are now shown explicitly
@@ -386,17 +386,36 @@ reasoning, without manipulating a model at hand. Proceed /very slowly!/
   produce them. (See [[appendix_a][Appendix "On Sub-Systems"]])
 - Sraffa asserts "at no other wage-level do values follow a simple
   rule".
-  - This is fairly cryptic. Does he mean values will not
-    be in proportion to the quantity of labor which directly and
-    indirectly produce the commodities? Or does he mean something else?
+  - Question: This is fairly cryptic. Does he mean values will not be in
+    proportion to the quantity of labor which directly and indirectly
+    produce the commodities? Or does he mean something else? 
+  - Answer: What Sraffa means, I believe, is that at no other wage level
+    do we recover the first sort of model we discussed...instead we
+    recover a system where the "relative values of commodities" are not
+    in direct proportion to their labor costs.
+  - *Remark.* It seems this proposition has some bearing on the labor
+    theory of value, although not in the "obvious way"...
 *** 15. Variety in the proportions of labor to Means of Production
 #+NAME: section_15
-- Lets consider, starting from the situation where the whole national
-  income goes to labor, we imagine wages are reduced: a rate of profits
+- Consider the situation when the wages are reduced (i.e., we don't
+  allocate the national product as wage): a rate of profits
   will emerge.
-- The key (to the movement of relative prices consequent upon a change in
-  the wage) lies in the inequality of the proportions in which labor and
-  the means of production are used in the various industries. 
+- How do "relative prices" react to changes in wage?
+- The key lies in the inequality of the proportions in which labor and
+  the means of production are used in the various industries.
+  - *Remark.* This phrasing seems ambiguous to me. What exactly is the
+    "proportion" Sraffa speaks of? Isn't it apples and oranges? Or does he
+    mean the ratio of "the value of the means of production" to the wage?
+    
+    It seems, based on reading further text, Sraffa refers to the ratio
+    of the "value of the means of production" to the wage...well, I
+    /think/ he means wage (or else it could be the "value of the labor"). 
+    
+    Sraffa is motivating his "Standard commodity" (the subject of the
+    next chapter!). The ratio, for the moment, is of values...but later
+    we will see it doesn't matter if we use values or actual
+    commodities. Yes it is "apples and oranges", but Sraffa's genius
+    works this out! 
 - If the proportion were the same in all industries, no price-changes
   could ensue regardless of any diversity of the commodity-composition
   of the means of production in different industries.
@@ -421,15 +440,16 @@ reasoning, without manipulating a model at hand. Proceed /very slowly!/
   when there is inequality of "proportions".
 - Suppose prices /did/ remain unchanged when the wage was reduced and a
   rate of profits emerged.
-  - Since in any one industry what was saved through the wage-reduction
-    would depend on the number of men employed---while what was necessary
-    for paying profits at a uniform rate would depend on the aggregate
-    value of the means of production used---industries with a
-    sufficiently low proportion of labor to means of production would
-    have a deficit...while industries with a sufficiently high
+  - Since in any one industry
+    
+    1. what was saved through the wage-reduction would depend on the number of men employed, while
+    2. what was necessary for paying profits at a uniform rate would depend on the aggregate value of the means of production used,
+    
+    Industries with a sufficiently low proportion of labor to means of
+    production would have a deficit...while industries with a sufficiently high
     proportion would have a *surplus*, on their payments for wages and profits.
   - Nothing is assumed at the moment as to what rate of profits
-    correspond to what wage reduction; all we require at this stage is
+    correspond to what wage reduction. All we require at this stage is
     there should be a uniform wage and a uniform rate of profits
     throughout the system.
 *** 17. A Watershed Proportion
@@ -537,15 +557,12 @@ reasoning, without manipulating a model at hand. Proceed /very slowly!/
 - It will be convenient to replace the "proportion" (quantity of labor
   to means of production) with one of the corresponding "pure" ratios
   between homogeneous quantities.
-  
-  There are two such ratios: 
-  1. the quantity-ratio of direct to indirect labor employed; and
-  2. the value-ratio of net product to means of production.
-  
-  These two ratios coincide when the value-ratio is calculated at the
-  values for /w/ = 1.
-  
-  Sraffa uses the latter ratio here.
+  - There are two such ratios: 
+    1. the *quantity-ratio* of direct to indirect labor employed; and
+    2. the *value-ratio* of net product to means of production.
+  - These two ratios coincide when the value-ratio is calculated at the
+    values for /w/ = 1.
+  - Sraffa uses the latter ratio here.
 - The rate of profits is uniform in all industries (and depends only on
   the wage), the value-ratio of the net product to the means of
   production is in general different for each industry and mainly
@@ -556,9 +573,9 @@ reasoning, without manipulating a model at hand. Proceed /very slowly!/
   the general rate of profits /r/. At this level the "value ratios" of
   all industries are equal, regardless of how different the "value
   ratios" may have been at other wage-levels.
-- The only "value-ratio" which can be invariant to changes in wage (and
+- The only "value-ratio" which /can/ be invariant to changes in wage (and
   thus capable of being "recurrent" in the sense defined in \sect[[section_21][21]])
-  is the one that is equal to the rate of profits corresponding with
+  is the one equal to the rate of profits corresponding with
   zero wage. And /that/ is the "balancing" ratio.
 - *Definition.* The "*Maximum Rate of Profits*" is the rate of profits
   as it would be if the whole national income went to profits, and we
@@ -587,6 +604,9 @@ reasoning, without manipulating a model at hand. Proceed /very slowly!/
     commodities) as anything else could. *BUT* we should know any such
     fluctuations would originate in the peculiarities of the production
     of the compared commodity...the change would *not* occur on its own.
+
+  - *Remark.* What Sraffa suggests, in modern terms, would be that a
+    [[https://en.wikipedia.org/wiki/Num%C3%A9raire][Numeraire]] exists.
 *** 24. The perfect Composite Commodity
 #+NAME: section_24
 - It's doubtful any single commodity posses the desired properties.
