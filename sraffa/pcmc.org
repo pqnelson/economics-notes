@@ -194,7 +194,7 @@
   solve for, yet the prices of non-luxury goods *are* unknowns
   which we need to determine. With the non-luxury good prices
   determined, we may deduce the luxury goods prices.
-- The certeria is: does a ccommodity enter (either directly or
+- *Definition.* The certeria is: does a ccommodity enter (either directly or
   indirectly) the production of /all/ commodities. Those that do,
   we shall call *basic* and those which do not are *non-basic*
   commodities. 
@@ -218,8 +218,27 @@
   its own price no less than the latter depends on them
 - Sraffa argues a "less one-sided description than cost of production
   seems therefore required".
-  - Classical terms such as "necessary price", "natural price", or
-    "price of production" would meet the case
+  - Classical terms include:
+    1. "necessary price" 
+       - generically, the physiocrats used this term,
+       - Pierre Paul Mercier de la Rivière, /The Natural and Essential Order of Political Societies/ "The necessary price of a piece of work
+         consists of the disbursements made by the worker for the
+         purchase of primary materials, and of the sum total of all his
+         consumption during the work."
+       - Thomas Hodgskin's
+         [[http://www.econlib.org/library/YPDBooks/Hodgskin/hgskPP10.html#IX.1][Popular Political Economy, IX.1]] "...the natural and necessary
+         price of money being determined...by the quantity of labour
+         required to produce it"
+    2. "natural price" 
+       - Adam Smith's /Inquiry/
+         [[http://www.marxists.org/reference/archive/smith-adam/works/wealth-of-nations/book01/ch04.htm][Ch. 4]], [[http://www.marxists.org/reference/archive/smith-adam/works/wealth-of-nations/book01/ch07.htm][Ch. 7]] "The natural price...is...the prices of all
+         commodities are continually gravitating"; 
+       - David Ricardo's [[http://www.marxists.org/reference/subject/economics/ricardo/tax/ch04.htm][/Principles/ Ch. 5]];
+       - J.S. Mill's [[http://www.econlib.org/library/Mill/mlP32.html#III.3.4][/Principles/ III.4]] "value...proportional to its cost
+         of production, [is] its Natural Value (or its Natural Price)"; 
+       - NB: John Locke appears to be the first(?) English economist to
+         use the terms "natural price" and "market price" in [[https://www.marxists.org/reference/subject/economics/locke/part1.htm][/Some Considerations of the Consequences of the Lowering of Interest and the Raising the Value of Money/]]),
+    3. "price of production" (e.g., Marx?)
   - But value and price have been preferred, because (a) it's shorter;
     and (b) in the present context --- which has no reference to "market
     prices" --- it's no more ambiguous.
@@ -276,9 +295,9 @@
   above". 
 *** 9. Wages paid out of the product
 #+NAME: section_9
-- We shall hereafter *assume* the wage is paid /post factum/ as a share
-  of the annual product. Thus we *abandon* the classical economists'
-  idea of a wage "advanced" from capital.
+- *Assumption (Wage paid after production).* We shall hereafter *assume*
+  the wage is paid /post factum/ as a share of the annual product. Thus
+  we *abandon* the classical economists' idea of a wage "advanced" from capital.
 - We retain the supposition of an annual cycle of production with an
   annual market.
 *** 10. Quantity and Quality of Labor
@@ -317,31 +336,32 @@
   /B/, etc.
 *** 12. National Income in a Self-Replacing System
 #+NAME: section_12
-- The national income of a system in a self-replacing state consists of
-  the set of commodities which are "left over" after the articles
-  replacing the means of production are used up.
+- *Definition.* The *National Income* of a system in a self-replacing
+  state consists of the set of commodities which are "left over" after
+  the articles replacing the means of production are used up.
   - In other words, if we denote /\Delta A/ = /A/ - (/A_{a}/ + /A_{b}/ + ... + /A_{k}/)
     and so on for all other industries, we have /(\Delta A)p_{a}/ + /(\Delta
     B)p_{b}/ + ... + /(\Delta K)p_{k}/ be the national income.
-- The value of this set of commodities, or "composite commodities" as it
+- *Convention (Value of National Income Set to Unity).*
+  The value of this set of commodities, or "composite commodities" as it
   may be called, which forms the national income...we set to 1.
-- Thus the national income becomes the standard in terms of which the
-  wage and /k/ prices are expressed (taking the place of the arbitrarily
-  chosen single commodity in terms of which the /k/ - 1 prices, besides
-  the wage, were expressed).
-- We have the additional equation:
-  #+begin_verse
-  (/\Delta A/) /p_{a}/ + (/\Delta B/) /p_{b}/ + ... + (/\Delta K/) /p_{k}/ = 1.
-  #+end_verse
-- It is impossible for the aggregate quantity of any commodity
-  represented in this expression to be negative, otherwise we contradict
-  the assumption the economy is in a self-replacing state!
-- This gives /k/ + 1 equations as compared to /k/ + 2 variables (the /k/
-  prices, the wage /w/, and the rate of profits /r/).
-- The result of adding the wage as one of the variables is that the
-  number of these now exceeds the number of equations by one. The system
-  has "one degree of freedom". If one of the variables is fixed, the
-  others will be too.
+  - Thus the national income becomes the standard in terms of which the
+    wage and /k/ prices are expressed (taking the place of the arbitrarily
+    chosen single commodity in terms of which the /k/ - 1 prices, besides
+    the wage, were expressed).
+  - We have the additional equation:
+    #+begin_verse
+    (/\Delta A/) /p_{a}/ + (/\Delta B/) /p_{b}/ + ... + (/\Delta K/) /p_{k}/ = 1.
+    #+end_verse
+  - It is impossible for the aggregate quantity of any commodity
+    represented in this expression to be negative, otherwise we contradict
+    the assumption the economy is in a self-replacing state!
+  - This gives /k/ + 1 equations as compared to /k/ + 2 variables (the /k/
+    prices, the wage /w/, and the rate of profits /r/).
+  - The result of adding the wage as one of the variables is that the
+    number of these now exceeds the number of equations by one. The system
+    has "one degree of freedom". If one of the variables is fixed, the
+    others will be too.
 ** Ch. 3. Proportions of Labour to Means of Production
  *CAUTION:* This entire section appears to be completely abstract
 reasoning, without manipulating a model at hand. Proceed /very slowly!/
