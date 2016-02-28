@@ -1,2 +1,9 @@
 # ignore autosave files
 *~
+
+# ignore exported files
+*.html
+
+# ignore references
+/ref/
+/ref/*
