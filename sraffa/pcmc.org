@@ -586,11 +586,9 @@ reasoning, without manipulating a model at hand. Proceed /very slowly!/
 - So we chose some commodity which we took as our "yard stick" measuring
   value. But we have a problem: how do we measure the changes of value
   over time?
-  
-  If we express everything in its exchangeability expressed in eggs,
+- *Problem.* If we express everything in its exchangeability expressed in eggs,
   what happens when the value of an egg changes?
-  
-  It becomes impossible to determine price-fluctuations...whether it
+- It becomes impossible to determine price-fluctuations...whether it
   emerges from the commodity or the particular "yard stick's" value
   changes.
   - The "relevant peculiarities" consists only in the inequality in the
@@ -604,7 +602,6 @@ reasoning, without manipulating a model at hand. Proceed /very slowly!/
     commodities) as anything else could. *BUT* we should know any such
     fluctuations would originate in the peculiarities of the production
     of the compared commodity...the change would *not* occur on its own.
-
   - *Remark.* What Sraffa suggests, in modern terms, would be that a
     [[https://en.wikipedia.org/wiki/Num%C3%A9raire][Numeraire]] exists.
 *** 24. The perfect Composite Commodity
@@ -648,10 +645,10 @@ reasoning, without manipulating a model at hand. Proceed /very slowly!/
   - We set up a system of equations, neglecting labor:
     #+begin_verse
     90 t + 120 c +  60 q \to 180 t
-    /p_{1}/ (50 t + 125 c + 150 q)\to /p_{1}/ (450 c)
-    /p_{2}/ (40 t +  40 c + 200 q)\to /p_{2}/ (480 q)
+    /x/ (50 t + 125 c + 150 q)\to /x/ (450 c)
+    /y/ (40 t +  40 c + 200 q)\to /y/ (480 q)
     #+end_verse
-    where we are trying to find /p_{1}/ and /p_{2}/ such that the 
+    where we are trying to find /x/ and /y/ such that the 
     ratio of the sum of the inputs to the outputs are the same (so the
     ratio of the sum of the iron inputs across all sectors to iron
     produced is the same as the coal inputs across all sectors to the
@@ -659,10 +656,10 @@ reasoning, without manipulating a model at hand. Proceed /very slowly!/
     
     So our system of equations may be derived from
     #+begin_verse
-    (90 + /p_{1}/ 50 + /p_{2}/ 40)/180 = (120 + /p_{1}/ 125 + /p_{2}/ 40)/(/p_{1}/ 450)
-                         = (60 + /p_{1}/ 150 + /p_{2}/ 200)/(/p_{2}/ 480)
+    (90 + /x/ 50 + /y/ 40)/180 = (120 + /x/ 125 + /y/ 40)/(/x/ 450)
+                         = (60 + /x/ 150 + /y/ 200)/(/y/ 480)
     #+end_verse
-    which works if and only if /p_{1}/ = 3/5, and /p_{2}/ = 3/4.
+    which works if and only if /x/ = 3/5, and /y/ = 3/4.
   - Thus our system becomes 
     #+begin_verse
     90 t iron + 120 t coal +  60 qr wheat + (3/16) labor \to 180 t iron
@@ -704,7 +701,8 @@ reasoning, without manipulating a model at hand. Proceed /very slowly!/
     Observe the surplus in this system is: 40 t iron, 60 t. coal, and 80
     qr. wheat. Thus --- insofar as I understand this --- 
     the unit would consist of 40 t. iron, 60 t. coal, and 80 qr. wheat.
-- *Definition.* Such a unit we shall call the *Standard net product* or *Standard national income*.
+- *Definition.* Such a unit we shall call the *Standard net product* or
+    *Standard national income*.
 *** 27. Equal Percentage Excess
 #+NAME: section_27
 - The rate which the quantity produced exceeds the quantity used up in
@@ -788,9 +786,54 @@ reasoning, without manipulating a model at hand. Proceed /very slowly!/
   For the latter is a function which the appropriate Standard commodity
   can fulfil in any case, regardless whether the system in in Standard
   proportions or not.
-- The second alternative /appears/ wrong. 
+- The second alternative /appears/ wrong. So lets look at it in some
+  more detail...
+  - In the Standard system, the wage is paid out in proportion to the
+    Standard commodity. This draws its special significance from the fact
+    the "left overs" from profit will be a quantity of the Standard
+    commodity. Moreover, it will be similar in composition to the means of
+    production.
+  - The result: the rate of profits (being the ratio of two homogeneous
+    quantities) can be *seen* to rise in direct proportion to any
+    reduction in wages.
+  - Consider an "actual system". When the equivalent of the same
+    quantity of the Standard commodity has been paid for wages, there is
+    no reason to believe the /value/ of what is left over for profits
+    should stand in the same ratio to the value of the means of
+    production...unlike the corresponding /quantities/ do in the Standard
+    system.
+- The actual system consists of the same basic equations as the Standard
+  system...just in different proportions. Once the wage is given, the
+  rate of profits is determined for both systems regardless of the
+  proportions of the equations in either of them.
+- Particular proportions (e.g., the Standard ones) may give transparency
+  to a system, and render visible what was hidden...but they *cannot*
+  change its mathematical properties.
+  - *Remark.* I think what has happened with the Standard system: we
+    took our equations of production, expressed it as a matrix, examined
+    the "Basic (commodities) subspace", projected the matrix obtaining a
+    submatrix, then obtained an equivalent matrix. We've determined
+    various properties of this equivalent matrix. The conclusion Sraffa
+    reaches: equivalent matrices have equivalent rates of profits.
+- The straight-line relation between wage and rate of profits therefore
+  hold in all cases...provided *only* the wage is expressed in terms of
+  the Standard product.
+  - The same rate of profits (which in the Standard system is obtained
+    as a ratio between /quantities/ of commodities) will in the actual
+    system result from the ratio of aggregate values.
 *** 32. Example
 #+NAME: section_32
+- Working with our running example, if in the actual system (as outlined
+  in \sect[[section_25][25]], with /R/ = 20%) the wage is fixed in terms of the Standard net
+  product, to /w/ = 3/4 there will correspond /r/ = 5%.
+- While the share of wages will be 3/4 of the Standard national income,
+  it /does not/ follow the share of profits will be the remaining 1/4 of
+  the Standard income.
+  - The share of profits will consist of whatever is left of the /actual/
+    national income after deducting from it the equivalent 3/4 of the
+    /Standard/ national income for wages.
+- Prices must be such as to make the value of what goes to profits equal
+  to 5% of the value of the actual means of production.
 *** 33. Construction of the Standard commodity: the /q/-system
 #+NAME: section_33
 *** 34. Standard national income as unit
