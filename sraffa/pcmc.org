@@ -14,9 +14,24 @@
 #+NAME: section_1
 # <<section_1>>
 - We consider an economy with two commodities, producing just enough to
-   maintain itself.
-- Commodities are produced by separate industries and
-  are exchanged at a market held after the harvest.
+  maintain itself.
+- *Assumption.* Commodities are produced by separate industries.
+  - This is a simplifying assumption which can be lifted, a single
+    industry could produce multiple commodities. For example, a beer
+    brewery produces beer (duh) and animal feed (from the used up [[https://en.wikipedia.org/wiki/Mashingg][mash]])
+    immediately. Since this brewery example is needlessly complicated,
+    and distracts from the underlying ideas, we'll put it on the back
+    burner until later.
+- *Assumption (Cycle of Exchange).*
+  Commodities are exchanged at a market held after the harvest.
+  - In practice this means we are assuming a discrete time variable. The
+    comic book picture I have, at least, is there's two snapshots: (1)
+    before production, at the start of the year; and (2) after
+    production, at the end of the year.
+  - Consequently, the only possibility for changes in the economy are at
+    these annual events. In between these events, the economy is assumed
+    to be unchanging. Because of this, the model being setup seems
+    /static/ to me.
 - Wheat an iron are produced, representing sustenance for the
   workers and the means of production (respectively). 
 - We suppose that 280 quarters of wheat and 12 tons of iron are used
@@ -29,10 +44,25 @@
    120 qr. wheat +  8 t. iron \to 20  t. iron.
   #+END_VERSE 
 
- - Note that when we add up the columns, it's *equal* to the
-   output. This is what we mean when we say "There is no surplus."
- - These relations Sraffa calls "the methods of production and
-   productive consumption" or *the methods of production*.
+  - Note that when we add up the columns, it's *equal* to the
+    output. This is what we mean when we say "There is no surplus."
+  - *Definition.*
+    These equations or relations Sraffa calls "the methods of production and
+    productive consumption" or *the methods of production*.
+- There exists a unique set of exchange-values which (if adopted by the
+  market) restores the original distribution of products, making it
+  possible for the process to repeat.
+  - Such values "spring directly" from the methods of production.
+  - Elementary linear algebra shows us 10 qr. wheat must be exchanged for
+    1 t. of iron.
+  - *Static Equilibrium Assumption.*
+    This implicitly assumes we are working in a static equilibrium. We
+    have discussed the "static" bit with the assumption of annual
+    cycles, the "equilibrium" bit may need some explanation. Well, not
+    really: we're describing a state in which economic forces are
+    balanced (hence the "reproduction of the same state" bit). The means
+    of production used /in the next production process/ turns out to be
+    *identical* to that used in the previous production process.
 *** 2. Three or More
 #+NAME: section_2
 - The same applies to any number of commodities. For example, if we add
@@ -68,9 +98,26 @@
   annually produced of /b/, etc.
 - We will call /A_a/, /B_a/, ..., /K_a/ the quantities of /a/, /b/, ...,
   /k/ annually used in the industry producing /a/, and so on.
-- The prices are the unknowns /p_a/, /p_b/, ..., /p_k/, which represent
-  the values of 1 unit of the commodities /a/, /b/, ..., /k/
+- The values are the unknowns /p_a/, /p_b/, ..., /p_k/, which represent
+  the value of 1 unit of the commodities /a/, /b/, ..., /k/
   (respectively) necessary to restore the initial position.
+  - We don't really care about the numeric value of the /p/'s, but the
+    ratios between them. For example, writing /p_{a}/ = 10 /p_{b}/ tells
+    us that we could exchange 1 unit of /a/ for 10 units of /b/.
+  - If we scale all the /p/'s by some nonzero constant, it leaves the
+    economy unchanged...which mathematically tells us we're working with
+    a projective space, not a vector space.
+  - What exactly /are/ the /p/'s though? They are presented as just
+    "some numbers" whose values permit the economy to reproduce. They
+    /are not/ monetary prices of goods, hence cannot be interpreted as
+    prices.
+    - Arguably, money is a commodity with a value --- it is one of the
+      sectors, and has a /p/ associated with it. The price of, say, /a/
+      would be how many units of money are exchanged for 1 unit
+      /a/. This is how classical economists thought of price.
+    - The projective freedom creates some ambiguity in my mind for fully
+      grasping /p/ intuitively. I cannot flesh out further, at the
+      moment, /why/.
 - We can now cast the conditions of production as: \\
   #+begin_verse
   /A_{a}p_a/ + /B_{a}p_b/ + ... + /K_{a}p_k/ = /Ap_a/
@@ -84,7 +131,7 @@
   output of the first row, etc.
   - Again, the approach one should take is to work with modified
     quantities /A'_{a}/ = /A_{a}/ ÷ /A/ and so on, working with primed
-    quantities as inputs and output quantitiess (*NOT PRICES*) set to 1. 
+    quantities as inputs and output quantities (*NOT PRICES*) set to 1. 
 - It is un-necessary to assume every commodity enters /directly/ into
   the production of every other. We could have pigs enter into
   production of wheat but not iron, and no iron enter into the
@@ -95,6 +142,14 @@
   change. This leaves /k/ - 1 independent linear equations which
   uniquely determine the /k/ - 1 prices. (This is similar to Marx's
   "general form of value" discussed in [[http://marxists.org/archive/marx/works/1867-c1/ch01.htm#S3c][/Das Kapital/, Vol. 1, Ch. 1]].)
+  - Arguably, the commodity taken as the standard of value /is/ the
+    money commodity. Suppose we fix the value of a pig to be 1.
+    (We're on the "pig standard", or something.)
+  - Fixing the value of one of the commodities gives a clear
+    interpretation of the /p/'s, as discussed in the cited bit from
+    Marx: /p_{a}/ --- in the pig standard --- is the number of pigs that
+    1 unit of /a/ "commands" (i.e., we exchange 1 unit of /a/ for
+    /p_{a}/ pigs).  
 - *Puzzle.* Consider the situation when the determinant of the
   production matrix is zero, which would happen if there are two rows or columns
   which differ by a constant multiple. What would this correspond to
@@ -105,24 +160,49 @@
 #+NAME: section_4
 - If the economy produces more than the bare minimum necessary
   for replacement, i.e., we have some surplus to be distributed,
-  then our model becomes self-contradictory. Why? Because the
-  "Gross National Product" (the right hand side) will contain the
-  sum of the columns on the left hand side plus bonus parts. We
-  cannot use the basic linear algebra one might naively use.
-- We alot the surplus /simultaneously/ as when the prices are
-  determined. 
-  - We cannot alot the surplus /before/ the prices are
-    determined. The surplus must be distributed in proportion to
-    the means of production advanced in each industry. 
-    Such a proportion between two aggregates of heterogeneous
-    goods ("the rate of profits") cannot be determined before we
-    know the prices of goods.
-  - OTOH, we cannot defer the allotment of the surplus till after
-    the prices are known, since the prices cannot be determined
-    before knowing the rate of profits.
-  - The distribution of the suplus *must* be determined through
-    the same mechanism and at the same time as the prices of
-    commodities. 
+  then our model becomes self-contradictory.
+  - Why? Because the "Gross National Product" (the right hand side) will
+    contain the sum of the columns on the left hand side plus bonus
+    parts. We cannot use the basic linear algebra one might naively try
+    after reading my notes on chapter 1. (Alas, I fooled even myself on
+    my first attempt reading Sraffa!)
+- *Assumption (Profit determined simultaneously with Prices).*
+  We allot the surplus /simultaneously/ as when the prices are
+  determined.
+  - Sraffa's justification for this assumption is as follows:
+    1. We cannot allot the surplus /before/ the prices are
+       determined.
+       - The surplus must be distributed in proportion to
+         the means of production advanced in each industry.
+       - Such a proportion between two aggregates of heterogeneous
+         goods ("the rate of profits") cannot be determined before we
+         know the prices of goods. This is Sraffa's central thesis in
+         presenting his "Standard Commodity" in Chapter 4.
+    2. OTOH, we cannot defer alloting the surplus till after
+       the prices are known, since the prices cannot be determined
+       before knowing the rate of profits.
+    3. Therefore the /distribution of the surplus/ *must* be determined
+       through the *same mechanism* and at the same time as the
+       /prices of commodities/.
+  - The condition of a static model is critical in Sraffa's thought
+    process.
+    - If we were allowed to vary the economy /during/ the
+      production process (e.g., if a neighboring country had a natural
+      catastrophe, and --- being good neighbors --- we altered our
+      production to assist; or if we considered a sort of "brewery
+      example", where a product takes a year to produce "distilling"
+      (i.e., unassisted from labor) and byproducts are taken to the market
+      in the meantime), then (a) the economy would no longer be static,
+      and (b) the rate of profits could not be determined so simply.
+    - How would the rate of profits behave during such a nonlinear
+      process? Arguably, we could modify Sraffa's model by "shortening"
+      the time interval, and thinking of a commodity at various stages
+      of production as /different goods/...we should end up with some
+      differential equation as the time interval "goes to zero".
+  - The assumption, however, of a static model is necessary to critique
+    the Neoclassical paradigm. Sraffa is meeting them on their terms, so
+    however unrealistic it might seem to me...the bone to pick is with
+    the Neoclassical school, not Sraffa.
 - We add the rate of profits ("which must be uniform for all
   industries") as an unknown, /r/, and the system becomes
   #+begin_verse  
@@ -142,38 +222,39 @@
 #+NAME: section_5
 - Lets revise our example from \sect[[section_1][1]] to have a surplus:
   #+begin_verse
-  280 qr wheat + 12 t iron \to 575 qr. wheat
-  120 qr wheat +  8 t iron \to  20  t. iron
+  280 qr. wheat + 12 t. iron \to 575 qr. wheat
+  120 qr. wheat +  8 t. iron \to  20  t. iron
   #+end_verse
   The answer is 15 qr wheat = 1 t. iron will restore the initial
   condition, and the rate of profit is /r/ = 25%
   - The trick is to rewrite this as producing one unit output in
     each sector:
     #+begin_verse
-    (56/115) qr wheat + 3/5 t iron \to 1 qr. wheat
-    (24/115) qr wheat + 2/5 t iron \to 1 t. iron
+    (56/115) qr. wheat + 3/5 t. iron \to 1 qr. wheat
+    (24/115) qr. wheat + 2/5 t. iron \to 1 t. iron
     #+end_verse
-    Then we let /p_{w}/ be the price of 1 qr wheat, /p_{i}/ be
-    the price of 1 t iron, /r/ the rate of profits.
+    Then we let /p_{w}/ be the price of 1 qr. wheat, /p_{i}/ be
+    the price of 1 t. iron, /r/ the rate of profits.
   - We have an eigen-problem of the form: /A/ *x* = /\lambda/ *x*   
     where /\lambda = 1/(1+r)/, /A/ is the matrix we deduced, and
     *x*  is the vector (/p_{w}/, /p_{i}/). 
   - Note that the matrix has eigenvalues /\lambda/ = 4/5, 2/23.
   - The rate of profit /r/ = /\lambda^{-1}/-1 could be either 1/4
-    or 23/2. Since the rate of profit must satisfy 0\le /r/\le 1,
-    we see /r/ = 1/4 is the solution.
+    or 23/2. Let us try /r/ = 1/4...
   - Now that we have our solution for /r/, we plug it into one of
     the sectors at random and solve for the prices. Since 1 + /r/
     = 5/4, we see:
     #+begin_verse
     (280 /p_{w}/ + 12 /p_{i}/)(5/4) = 575 /p_{w}/
     #+end_verse
-    implies 15 /p_{i}/ = 225 /p_{w}/, or equivalently 1 t iron
-    may be traded for 15 qr wheat.
+    implies 15 /p_{i}/ = 225 /p_{w}/, or equivalently 1 t. iron
+    may be traded for 15 qr. wheat.
   - *Question:* What if we plugged in /r/ = 23/2 instead?
     - We then find (280 /p_{w}/ + 12 /p_{i}/)(25/2) = 575 /p_{w}/ or
       equivalently, 39 /p_{w}/ = -2 /p_{i}/...which is hard to explain
       as a coherent choice for prices.
+    - An obvious constraint would be the prices must be positive, which
+      restricts possible choices of /r/.
 *** 6. Basic and Non-Basic Products
 #+NAME: section_6
 - Notice before, without surplus, all commodities produced /must/
@@ -194,17 +275,27 @@
   solve for, yet the prices of non-luxury goods *are* unknowns
   which we need to determine. With the non-luxury good prices
   determined, we may deduce the luxury goods prices.
-- *Definition.* The certeria is: does a ccommodity enter (either directly or
+- *Definition.* The criteria is: does a commodity enter (either directly or
   indirectly) the production of /all/ commodities. Those that do,
   we shall call *basic* and those which do not are *non-basic*
-  commodities. 
+  commodities.
+  - If we tried weakening this definition to allow /basic/ commodities
+    to enter the production of all /basic/ commodities, it is entirely
+    feasible to have two "subeconomies" completely decoupled from each
+    other. This is bad, and something we'd like to try to
+    avoid. Consequently, a basic commodity enters into the production of
+    /all/ commodities.
+  - We could ask /Do basic commodities really exist?/ Is there some good
+    that empirically enters into the production of all commodities? I
+    suppose electricity might be one, but I am at a loss to figure out
+    any others...
 *** 7. Terminological Note
 #+NAME: section_7
 - Why do we call the ratios satisfying conditions of production "values"
   or "prices" rather than "costs of production"?
 - The latter would be adequate so far as *non*-basic products were
   concerned, since their exchange ratio is merely a reflection of what
-  must be paid for their means of production, labour, and profits in
+  must be paid for their means of production, labor, and profits in
   order to produce---there is no mutual dependence.
 - Basic products have another dimension
   - Its exchange-ratio depends on its use in the production of other
@@ -250,8 +341,8 @@
     prior to --- the determination of the prices of the products.
   - Consider the "real costs" of Marshall ("But now we have to take account of the fact that the
     production of a commodity generally requires many different kinds of
-    labour and the use of capital in many forms. The exertions of all
-    the different kinds of labour that are directly or indirectly
+    labor and the use of capital in many forms. The exertions of all
+    the different kinds of labor that are directly or indirectly
     involved in making it; together with the abstinences or rather the
     waitings required for saving the capital used in making it: all
     these efforts and sacrifices together will be called the real cost
@@ -259,7 +350,7 @@
     [[http://www.marxists.org/reference/subject/economics/marshall/bk5ch03.htm][Principles of Economics, Book 5, Chapter 3]]) 
     and the "quantity of capital" which is implied in the marginal
     productivity theory. 
-  - Sraffa avoids suppositions which such terms connotate, since he's
+  - Sraffa avoids suppositions which such terms connote, since he's
     trying to critique the marginalist paradigm.
 *** 8. Subsistence-Wage and Surplus-Wage
 #+NAME: section_8
@@ -298,8 +389,8 @@
 - *Assumption (Wage paid after production).* We shall hereafter *assume*
   the wage is paid /post factum/ as a share of the annual product. Thus
   we *abandon* the classical economists' idea of a wage "advanced" from capital.
-- We retain the supposition of an annual cycle of production with an
-  annual market.
+- *Assumption (Annual Cycle of Production).* We retain the supposition
+  of an annual cycle of production with an annual market.
 *** 10. Quantity and Quality of Labor
 #+NAME: section_10
 - The quantity of labor employed in each industry should now be
@@ -362,7 +453,7 @@
     number of these now exceeds the number of equations by one. The system
     has "one degree of freedom". If one of the variables is fixed, the
     others will be too.
-** Ch. 3. Proportions of Labour to Means of Production
+** Ch. 3. Proportions of Labor to Means of Production
  *CAUTION:* This entire section appears to be completely abstract
 reasoning, without manipulating a model at hand. Proceed /very slowly!/
 *** 13. Wages as a Proportion of National Income
@@ -492,7 +583,7 @@ reasoning, without manipulating a model at hand. Proceed /very slowly!/
 - Conversely, price-movements in the opposite direction would accomplish
   the disposal of the surplus which otherwise would appear in an
   industry using a high "proportion" of labor to the means of production.
-*** 19. Price-Ratios of Product ot Means of Production
+*** 19. Price-Ratios of Product to Means of Production
 #+NAME: section_19
 - It does not follow that the price of the product of an industry
   having a low proportion of labor to means of production (and hence a
@@ -503,13 +594,13 @@ reasoning, without manipulating a model at hand. Proceed /very slowly!/
   for this seeming contradiction: the means of production for an
   industry are themselves the product of one or more industries which
   (in turn)
-  may employ a still lower proportion of labour to the means of
+  may employ a still lower proportion of labor to the means of
   production (and the same may be said for these commodities' means of
   production; etc.)
   
   In this case, the price of the product --- although produced by a
   "deficit" industry --- might *fall* in terms of its means of
-  production. Its deficiency would have to be ade good through a
+  production. Its deficiency would have to be made good through a
   particularly steep rise relative to labor.
 - Result: as wages fall, the price of the product for a low-proportion
   ("deficit") industry may rise or fall, or even alternate in rising and
@@ -552,7 +643,7 @@ reasoning, without manipulating a model at hand. Proceed /very slowly!/
      the industry's aggregate means of production without limit.
 - Note the second condition /implies/ the first. This is the subject of
   the next section...
-*** 22. Balacing Ratio and Maximum Rate of Profits
+*** 22. Balancing Ratio and Maximum Rate of Profits
 #+NAME: section_22
 - It will be convenient to replace the "proportion" (quantity of labor
   to means of production) with one of the corresponding "pure" ratios
@@ -595,7 +686,7 @@ reasoning, without manipulating a model at hand. Proceed /very slowly!/
   - The "relevant peculiarities" consists only in the inequality in the
     ratio of labor to means of production in the "successive layers"
     into which a commodity and the aggregate of its means of production
-    can be analysed. 
+    can be analyzed. 
 - The "balanced" commodity which we considered in \sect[[section_21][21]] would present
   no peculiarities we just discussed.
   - We admit that as wages fell, such a "balanced commodity" would be as
@@ -623,7 +714,7 @@ reasoning, without manipulating a model at hand. Proceed /very slowly!/
 #+NAME: section_25
 - The problem really concerns industries rather than commodities...so we
   should approach it from that angle.
-- Suppose we pick out a subspace (a "subeconomy" if you will) that forms
+- Suppose we pick out a subspace (a "sub-economy" if you will) that forms
   a "complete miniature system" with some property. Specifically, we
   want its various commodities represented among its aggregate means of
   production in /the same proportions/ as they are among its products.
@@ -669,7 +760,7 @@ reasoning, without manipulating a model at hand. Proceed /very slowly!/
     #+end_verse
 - The proportions which the three commodities are produced in the new
   system (180 : 270 : 360) are equal to the proportions which they enter
-  its aggregate means of production (150 : 225 : 300). THe composite
+  its aggregate means of production (150 : 225 : 300). The composite
   commodity sought for is accordingly made up in the proportions
   #+begin_verse
   1 t. iron : 1.5 t. coal : 2 qr. wheat.
@@ -785,7 +876,7 @@ reasoning, without manipulating a model at hand. Proceed /very slowly!/
      of production (which is unique to the Standard system); or
   2. in its supplying the medium in which wages are estimated?
   For the latter is a function which the appropriate Standard commodity
-  can fulfil in any case, regardless whether the system in in Standard
+  can fulfill in any case, regardless whether the system in in Standard
   proportions or not.
 - The second alternative /appears/ wrong. So lets look at it in some
   more detail...
@@ -918,7 +1009,9 @@ reasoning, without manipulating a model at hand. Proceed /very slowly!/
   seeking since \sect[[section_23][23]].
 *** 35. Non-Basics excluded
 #+NAME: section_35
-- We excluded non-basic products from the system, so it's impossible they could influence...anything. The multiplier appropriate for their equations can only be zero.
+- We excluded non-basic products from the system, so it's 
+  impossible they could influence...anything. The multiplier
+  appropriate for their equations can only be zero.
   - The same is true for non-basics which, while not entering the means
     of production for commodities in general, but are used in producing
     non-basics...including themselves (e.g., special raw materials for
@@ -1168,7 +1261,7 @@ multipliers! We will enumerate the steps in Sraffa's proof...
     When /r/ was made equal to /R'_{}/ the wage in terms of any one of
     the Standard commodities would consist of a nonzero quantity of such
     Standard commodity...but the value of the latter would be zero if
-    expressed in terms of the Standard ocmmodity formed by means of
+    expressed in terms of the Standard commodity formed by means of
     all-positive multipliers and which corresponds to /R'_{}/.
 
 *** 43. Standard product replace by equivalent quantity of labor
@@ -1271,11 +1364,11 @@ multipliers! We will enumerate the steps in Sraffa's proof...
   the necessity of following one line of argument at a time".
 *** 46. "Reduction" defined
 #+NAME: section_46
-- *Definition.* We call "Reducation to Dated Quantities of Labor" (or
+- *Definition.* We call "Reduction to Dated Quantities of Labor" (or
   "/Reduction/" for short) an operation where the equation for a
   commodity, the different means of production used are replaced with
   a series of quantities of labor, each with its appropriate "date".
-- Consider the equation representating the production for commodity
+- Consider the equation representing the production for commodity
   '/a/' (where wage and prices are expressed in terms of the Standard
     commodity):
   #+begin_quote
@@ -1328,7 +1421,7 @@ multipliers! We will enumerate the steps in Sraffa's proof...
 - Sraffa notes only at /r/ = /R/ the residue becomes all-important as
   the sole determinant of the price of the product.
   - Mathematically, this makes sense since /w/ = 0 when /r/ = /R/. Hence
-    the infinite series sums infinitely many zeroes.    
+    the infinite series sums infinitely many zeros.    
 *** 47. Pattern of movement of individual terms with changes in distribution
 #+NAME: section_47
 *** 48. Movement of an aggregate of terms
