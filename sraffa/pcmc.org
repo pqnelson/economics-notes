@@ -10,15 +10,14 @@
 
 * Part I. Single-Product Industries and Circulating Capital
 ** Ch. 1. Production for Subsistence
-*** 1. Two Commodities 
-#+NAME: section_1
-# <<section_1>>
+
+*** <<section_1>>1. Two Commodities 
 - We consider an economy with two commodities, producing just enough to
   maintain itself.
 - *Assumption.* Commodities are produced by separate industries.
   - This is a simplifying assumption which can be lifted, a single
     industry could produce multiple commodities. For example, a beer
-    brewery produces beer (duh) and animal feed (from the used up [[https://en.wikipedia.org/wiki/Mashingg][mash]])
+    brewery produces beer (duh) and animal feed (from the used up [[https://en.wikipedia.org/wiki/Mashing][mash]])
     immediately. Since this brewery example is needlessly complicated,
     and distracts from the underlying ideas, we'll put it on the back
     burner until later.
@@ -63,8 +62,7 @@
     balanced (hence the "reproduction of the same state" bit). The means
     of production used /in the next production process/ turns out to be
     *identical* to that used in the previous production process.
-*** 2. Three or More
-#+NAME: section_2
+*** <<section_2>>2. Three or More
 - The same applies to any number of commodities. For example, if we add
   a third sector (pigs): \\
   #+BEGIN_VERSE
@@ -84,8 +82,7 @@
 (4/15) qr. wheat + (1/7) t. iron + (5/10) pigs \to 1 pig
   #+END_VERSE
 - Then we just use linear algebra to solve this as usual.
-*** 3. General Case
-#+NAME: section_3
+*** <<section_3>>3. General Case
 - We have commodities of different "species" (e.g., iron, wheat,
   etc.). Lower case variables will keep track of each species /a/, /b/,
   /c/, ..., /k/. NB: the term "species" is mine, not Sraffa's.
@@ -156,8 +153,7 @@
   economically (i.e., how would we interpret this)? And how would we
   solve it? Could it ever happen "in reality"?
 ** Ch. 2. Production with a Surplus
-*** 4. The rate of Profits
-#+NAME: section_4
+*** <<section_4>>4. The rate of Profits
 - If the economy produces more than the bare minimum necessary
   for replacement, i.e., we have some surplus to be distributed,
   then our model becomes self-contradictory.
@@ -218,8 +214,8 @@
   of it used in other sectors' production together.
 - The system has /k/ independent equations, which determines the
   /k - 1/ unknowns plus the rate of profit.
-*** 5. Example of Rate of Profits
-#+NAME: section_5
+*** <<section_5>>5. Example of Rate of Profits
+
 - Lets revise our example from \sect[[section_1][1]] to have a surplus:
   #+begin_verse
   280 qr. wheat + 12 t. iron \to 575 qr. wheat
@@ -255,8 +251,7 @@
       as a coherent choice for prices.
     - An obvious constraint would be the prices must be positive, which
       restricts possible choices of /r/.
-*** 6. Basic and Non-Basic Products
-#+NAME: section_6
+*** <<section_6>>6. Basic and Non-Basic Products
 - Notice before, without surplus, all commodities produced /must/
   be used in the production of other commodities. But now, with
   surplus, we may have commodities which are not needed in the
@@ -289,8 +284,7 @@
     that empirically enters into the production of all commodities? I
     suppose electricity might be one, but I am at a loss to figure out
     any others...
-*** 7. Terminological Note
-#+NAME: section_7
+*** <<section_7>>7. Terminological Note
 - Why do we call the ratios satisfying conditions of production "values"
   or "prices" rather than "costs of production"?
 - The latter would be adequate so far as *non*-basic products were
@@ -352,8 +346,7 @@
     productivity theory. 
   - Sraffa avoids suppositions which such terms connote, since he's
     trying to critique the marginalist paradigm.
-*** 8. Subsistence-Wage and Surplus-Wage
-#+NAME: section_8
+*** <<section_8>>8. Subsistence-Wage and Surplus-Wage
 - We have regarded wages as consisting of the necessary subsistence of
   the workers, and enters the system on equal footing as fuel for
   engines or feed for cattle.
@@ -384,15 +377,13 @@
 - The discussion Sraffa entertains can "easily be adapted to the more
   appropriate, if unconventional, interpretation of the wage suggested
   above". 
-*** 9. Wages paid out of the product
-#+NAME: section_9
+*** <<section_9>>9. Wages paid out of the product
 - *Assumption (Wage paid after production).* We shall hereafter *assume*
   the wage is paid /post factum/ as a share of the annual product. Thus
   we *abandon* the classical economists' idea of a wage "advanced" from capital.
 - *Assumption (Annual Cycle of Production).* We retain the supposition
   of an annual cycle of production with an annual market.
-*** 10. Quantity and Quality of Labor
-#+NAME: section_10
+*** <<section_10>>10. Quantity and Quality of Labor
 - The quantity of labor employed in each industry should now be
   represented explicitly, taking the place of the corresponding
   quantities of subsistence.
@@ -413,8 +404,7 @@
 - We call /w/ the wage per unit of labor, which like the prices will be
   expressed in terms of the chosen standard
   - (See also, on the choice of a standard, in \sect[[section_12][12]])
-*** 11. Equations of Production
-#+NAME: section_11
+*** <<section_11>>11. Equations of Production
 - So, with these additional assumptions, the equations take the form:
   #+begin_verse
   (/A_{a}p_{a}/ + /B_{a}p_{b}/ + ... + /K_{a}p_{k}/)(1 + /r/) + /L_{a}w/ = /Ap_{a}/
@@ -425,8 +415,7 @@
 - We assume, as before, the system is in a self-replacing state, so
   /A_{a}+A_{b}+...+A_{k}\le A/, /B_{a}/ + /B_{b}/ + ... + /B_{k}/ \le
   /B/, etc.
-*** 12. National Income in a Self-Replacing System
-#+NAME: section_12
+*** <<section_12>>12. National Income in a Self-Replacing System
 - *Definition.* The *National Income* of a system in a self-replacing
   state consists of the set of commodities which are "left over" after
   the articles replacing the means of production are used up.
@@ -456,16 +445,14 @@
 ** Ch. 3. Proportions of Labor to Means of Production
  *CAUTION:* This entire section appears to be completely abstract
 reasoning, without manipulating a model at hand. Proceed /very slowly!/
-*** 13. Wages as a Proportion of National Income
-#+NAME: section_13
+*** <<section_13>>13. Wages as a Proportion of National Income
 - We now give the wage /w/ successive values ranging from 1 to 0: these
   represent fractions of the national income
   (compare \sect[[section_10][10]] and \sect[[section_12][12]]).
 - Objective: determine how changes in the wage affects the rate of
   profits, and the prices of individual commodities...assuming the
   methods of production remain unchanged.  
-*** 14. Values when whole National Income goes to Wages
-#+NAME: section_14
+*** <<section_14>>14. Values when whole National Income goes to Wages
 - When we make /w/ = 1, the whole national income goes to wages
   and /r/ is eliminated.
 - We thus revert to the systems of equations we /began/ with! The
@@ -486,8 +473,7 @@ reasoning, without manipulating a model at hand. Proceed /very slowly!/
     in direct proportion to their labor costs.
   - *Remark.* It seems this proposition has some bearing on the labor
     theory of value, although not in the "obvious way"...
-*** 15. Variety in the proportions of labor to Means of Production
-#+NAME: section_15
+*** <<section_15>>15. Variety in the proportions of labor to Means of Production
 - Consider the situation when the wages are reduced (i.e., we don't
   allocate the national product as wage): a rate of profits
   will emerge.
@@ -525,8 +511,7 @@ reasoning, without manipulating a model at hand. Proceed /very slowly!/
   - From this it follows if the proportions are unequal at the set of
     values corresponding to one wage, they cannot be equal at any other,
     and so they are unequal at all values.
-*** 16. "Deficit-Industries" and "Surplus-Industries"
-#+NAME: section_16
+*** <<section_16>>16. "Deficit-Industries" and "Surplus-Industries"
 - For the same reason, it is impossible for prices to remain unchanged
   when there is inequality of "proportions".
 - Suppose prices /did/ remain unchanged when the wage was reduced and a
@@ -543,8 +528,7 @@ reasoning, without manipulating a model at hand. Proceed /very slowly!/
     correspond to what wage reduction. All we require at this stage is
     there should be a uniform wage and a uniform rate of profits
     throughout the system.
-*** 17. A Watershed Proportion
-#+NAME: section_17
+*** <<section_17>>17. A Watershed Proportion
 - There would be a "critical proportion" of labor to means of production
   which marked the watershed between "deficit" and "surplus" industries.
 - An industry with such a proportion would show an *even balance*---the
@@ -555,8 +539,7 @@ reasoning, without manipulating a model at hand. Proceed /very slowly!/
   industries---the industry with the lowest proportion of labor to means
   of production would be a "deficit" industry and the one with the
   highest proportion would be a "surplus" industry.
-*** 18. Price-Changes to Redress Balance
-#+NAME: section_18
+*** <<section_18>>18. Price-Changes to Redress Balance
 - Thus with a wage-reduction, price-changes would +be called for+ necessary to
   redress the balance in each of the "deficit" and "surplus" industries.
 - We expect the price-ratio between each product and its means of
@@ -583,8 +566,7 @@ reasoning, without manipulating a model at hand. Proceed /very slowly!/
 - Conversely, price-movements in the opposite direction would accomplish
   the disposal of the surplus which otherwise would appear in an
   industry using a high "proportion" of labor to the means of production.
-*** 19. Price-Ratios of Product to Means of Production
-#+NAME: section_19
+*** <<section_19>>19. Price-Ratios of Product to Means of Production
 - It does not follow that the price of the product of an industry
   having a low proportion of labor to means of production (and hence a
   "potential deficit") would necessarily rise, with a wage-reduction,
@@ -610,8 +592,7 @@ reasoning, without manipulating a model at hand. Proceed /very slowly!/
   \sect\sect[[section_21][21]]--[[section_21][22]], is remain stable in price relative to its
   means of production throughout any range (long or short) of the
   wage-variation. 
-*** 20. Price-Ratios between Products
-#+NAME: section_20
+*** <<section_20>>20. Price-Ratios between Products
 - These considerations dominate the price-relation of a product to its
   means of production *and* equally to its relations to any other product.
 - It's the "proportions" of labor to means of production which
@@ -620,8 +601,7 @@ reasoning, without manipulating a model at hand. Proceed /very slowly!/
   same method determining its "relative price".
 - The net result and justification for price-variations from a change in
   distribution remains a simple one: redressing the balance in each industry.
-*** 21. A Recurrent Proportion
-#+NAME: section_21
+*** <<section_21>>21. A Recurrent Proportion
 - We can now revert to the "critical proportion" (mentioned in
   \sect[[section_17][17]]) as the border between "deficit" industries and "surplus"
   ones.
@@ -643,8 +623,7 @@ reasoning, without manipulating a model at hand. Proceed /very slowly!/
      the industry's aggregate means of production without limit.
 - Note the second condition /implies/ the first. This is the subject of
   the next section...
-*** 22. Balancing Ratio and Maximum Rate of Profits
-#+NAME: section_22
+*** <<section_22>>22. Balancing Ratio and Maximum Rate of Profits
 - It will be convenient to replace the "proportion" (quantity of labor
   to means of production) with one of the corresponding "pure" ratios
   between homogeneous quantities.
@@ -668,13 +647,11 @@ reasoning, without manipulating a model at hand. Proceed /very slowly!/
   thus capable of being "recurrent" in the sense defined in \sect[[section_21][21]])
   is the one equal to the rate of profits corresponding with
   zero wage. And /that/ is the "balancing" ratio.
-#+NAME: defn_max_rate_of_profits
-- *Definition.* The "*Maximum Rate of Profits*" is the rate of profits
+- <<defn_max_rate_of_profits>>*Definition.* The "*Maximum Rate of Profits*" is the rate of profits
   as it would be if the whole national income went to profits, and we
   denote it by /R/.
 ** Ch. 4. The Standard Commodity
-*** 23. "An invariable measure of value"
-#+NAME: section_23
+*** <<section_23>>23. "An invariable measure of value"
 - So we chose some commodity which we took as our "yard stick" measuring
   value. But we have a problem: how do we measure the changes of value
   over time?
@@ -696,8 +673,7 @@ reasoning, without manipulating a model at hand. Proceed /very slowly!/
     of the compared commodity...the change would *not* occur on its own.
   - *Remark.* What Sraffa suggests, in modern terms, would be that a
     [[https://en.wikipedia.org/wiki/Num%C3%A9raire][Numeraire]] exists.
-*** 24. The perfect Composite Commodity
-#+NAME: section_24
+*** <<section_24>>24. The perfect Composite Commodity
 - It's doubtful any /single/ commodity posses the desired properties.
 - A *mixture* of commodities, or a "composite commodity", i.e. a linear
   combination of commodities, would do equally well...or even better,
@@ -710,8 +686,7 @@ reasoning, without manipulating a model at hand. Proceed /very slowly!/
   - NB: This is a symmetry condition! One could apply representation
     theory, but that would be overkill...
 - Sraffa asks: can such a commodity be constructed? (I'm going to guess "yes"...)
-*** 25. Construction of such a commodity: example
-#+NAME: section_25
+*** <<section_25>>25. Construction of such a commodity: example
 - The problem really concerns industries rather than commodities...so we
   should approach it from that angle.
 - Suppose we pick out a subspace (a "sub-economy" if you will) that forms
@@ -768,8 +743,7 @@ reasoning, without manipulating a model at hand. Proceed /very slowly!/
 - *Remark.* Again, this seems familiar compared with, e.g., Marx's
   notion of the "total or expanded form of value" discussed in
   [[http://marxists.org/archive/marx/works/1867-c1/ch01.htm#S3b][/Das Kapital/, Ch. 1, \sect 3]].
-*** 26. Standard Commodity Defined
-#+NAME: section_26
+*** <<section_26>>26. Standard Commodity Defined
 - *Definitions.* We shall call this sort of mixture the *Standard composite commodity*,
   or /Standard commodity/ for short. The set of equations taken in the
   proportions producing the standard commodity we call the *Standard system*.
@@ -795,8 +769,7 @@ reasoning, without manipulating a model at hand. Proceed /very slowly!/
     the unit would consist of 40 t. iron, 60 t. coal, and 80 qr. wheat.
 - *Definition.* Such a unit we shall call the *Standard net product* or
     *Standard national income*.
-*** 27. Equal Percentage Excess
-#+NAME: section_27
+*** <<section_27>>27. Equal Percentage Excess
 - The rate which the quantity produced exceeds the quantity used up in
   production is the same in each sector for a Standard system. Why?
   Simple: in the Standard system the various commodities produced are in
@@ -807,8 +780,7 @@ reasoning, without manipulating a model at hand. Proceed /very slowly!/
 - Observe for the surplus sectors, when we add the input together then
   multiply by 120%, we recover the output from the transformed system
   described in \sect[[section_25][25]].
-*** 28. Standard Ratio (/R/) of Net Product to Means of Production
-#+NAME: section_28
+*** <<section_28>>28. Standard Ratio (/R/) of Net Product to Means of Production
 - *Definition.* The rate which applies to individual commodities *is* also the
   rate which the total product of the Standard system exceeds its
   aggregate means of production, i.e., the ratio of the net product to
@@ -828,8 +800,7 @@ reasoning, without manipulating a model at hand. Proceed /very slowly!/
   production would remain the same...regardless of variations in the
   division of net product between wages and profits, and regardless of
   consequent price changes.
-*** 29. Standard Ratio and Rates of Profits
-#+NAME: section_29
+*** <<section_29>>29. Standard Ratio and Rates of Profits
 - If we use a fraction of the net product instead, everything that has
   been stated holds...why? Because we are working with multiples of a
   composite commodity! So the ratio of such a fraction to the means of
@@ -852,8 +823,7 @@ reasoning, without manipulating a model at hand. Proceed /very slowly!/
     "one", I mean "I"...
 - The rate of profits in the Standard system therefore appears as a
   ratio between quantities of commodities irrespective of their prices.
-*** 30. Relation between wage and rate of profits in Standard System
-#+NAME: section_30
+*** <<section_30>>30. Relation between wage and rate of profits in Standard System
 - Let us re-capitulate what has been determined:
     
   If /R/ is the Standard ratio or Maximum rate of profits, and /w/ is
@@ -865,8 +835,7 @@ reasoning, without manipulating a model at hand. Proceed /very slowly!/
   Thus as wages gradually reduce from 1 to 0, the rate of profits
   increase /in direct proportion/. The relationship is a straight line
   plotted on the axes (/r/, /w/).
-*** 31. Relation Extended to any system
-#+NAME: section_31
+*** <<section_31>>31. Relation Extended to any system
 - Now, here we should note we've been working with a very peculiar
   "Standard system"...but does our results hold for *any* arbitrary
   economic system? (C.f., my exercise in \sect[[section_29][29]].)
@@ -913,8 +882,7 @@ reasoning, without manipulating a model at hand. Proceed /very slowly!/
   - The same rate of profits (which in the Standard system is obtained
     as a ratio between /quantities/ of commodities) will in the actual
     system result from the ratio of aggregate values.
-*** 32. Example
-#+NAME: section_32
+*** <<section_32>>32. Example
 - Working with our running example, if in the actual system (as outlined
   in \sect[[section_25][25]], with /R/ = 20%) the wage is fixed in terms of the Standard net
   product, to /w/ = 3/4 there will correspond /r/ = 5%.
@@ -926,8 +894,7 @@ reasoning, without manipulating a model at hand. Proceed /very slowly!/
     /Standard/ national income for wages.
 - Prices must be such as to make the value of what goes to profits equal
   to 5% of the value of the actual means of production.
-*** 33. Construction of the Standard commodity: the /q/-system
-#+NAME: section_33
+*** <<section_33>>33. Construction of the Standard commodity: the /q/-system
 - *Problem.* Constructing a Standard commodity amounts to finding a set
   of /k/ suitable multipliers, which Sraffa calls /q_{a}/, /q_{b}/, ...,
   /q_{k}/, applied respectively to the production equations of
@@ -975,8 +942,7 @@ reasoning, without manipulating a model at hand. Proceed /very slowly!/
   This gives us /k/ + 1 independent equations determining the /k/
   multipliers and /R/.
 
-*** 34. Standard national income as unit
-#+NAME: section_34
+*** <<section_34>>34. Standard national income as unit
 - Suppose we solve our /q/ system of equations.
   - *Notation:* Sraffa refers to the solutions as /q'_{a}/, /q'_{b}/,
     ..., /q'_{k}/ --- primed /q/'s refer to the particular fixed solutions.
@@ -1007,8 +973,7 @@ reasoning, without manipulating a model at hand. Proceed /very slowly!/
 - The composite commodity given by this unit equation (\Delta /A/ +
   ... + \Delta /K/) is the Standard of wages and prices we have been
   seeking since \sect[[section_23][23]].
-*** 35. Non-Basics excluded
-#+NAME: section_35
+*** <<section_35>>35. Non-Basics excluded
 - We excluded non-basic products from the system, so it's 
   impossible they could influence...anything. The multiplier
   appropriate for their equations can only be zero.
@@ -1042,12 +1007,10 @@ reasoning, without manipulating a model at hand. Proceed /very slowly!/
   rate of profits. 
 
 ** Ch. 5. Uniqueness of the Standard System
-*** 36. Introductory
-#+NAME: section_36
+*** <<section_36>>36. Introductory
 - Sraffa will prove there exists precisely one way to transform a given
   economic system into a Standard system. 
-*** 37. Transformation into a Standard system always possible
-#+NAME: section_37
+*** <<section_37>>37. Transformation into a Standard system always possible
 - We may show this using an "imaginary experiment" (Sraffa's term for a
   "thought experiment"?).
 - *Algorithm.* We can generate the standard system constructively. It involves two types of alternating steps:
@@ -1080,8 +1043,7 @@ reasoning, without manipulating a model at hand. Proceed /very slowly!/
   brought. The uniform rate restoring the original conditions of
   production is /R/, and the proportions attained by the industries are
   the Standard proportions!
-*** 38. Why question of uniqueness arises
-#+NAME: section_38
+*** <<section_38>>38. Why question of uniqueness arises
 - Is the Standard system unique, or are there other ways to get the same result?
 - The equations of the /q/-system \sect[[section_33][33]] are reducible to an equation
   of the /k/-th degree in /R/. The [[http://mathworld.wolfram.com/FundamentalTheoremofAlgebra.html][fundamental theorem of algebra]] tells
@@ -1089,8 +1051,7 @@ reasoning, without manipulating a model at hand. Proceed /very slowly!/
 - It is sufficient to prove there cannot be more than one value of /R/
   which corresponds to an all-positive set of /q/'s. This implies
   [[http://mathworld.wolfram.com/UniquenessTheorem.html][uniqueness]] of the Standard System.
-*** 39. Prices Positive at all wage levels
-#+NAME: section_39
+*** <<section_39>>39. Prices Positive at all wage levels
 - First, we must show -- as there always exists a possible set of
   multipliers (\sect[[section_37][37]]) -- there exists at all values of wage (including
   zero) a set of prices satisfying the condition of replacement of the
@@ -1111,8 +1072,7 @@ reasoning, without manipulating a model at hand. Proceed /very slowly!/
     through becoming infinite---unlike the /p/'s of non-basics which can
     do so. Sraffa shows this in "Note on Self-reproducing Non-basics"
     (Appendix B).
-*** 40. Production equations with zero wages
-#+NAME: section_40
+*** <<section_40>>40. Production equations with zero wages
 - For comparison purposes, we rewrite here the production equations as
   they appear when wages vanish (i.e., when /w/ = 0).
 - The labor terms may be omitted (since we multiply them with 0), and we
@@ -1125,8 +1085,7 @@ reasoning, without manipulating a model at hand. Proceed /very slowly!/
   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
   (/A_{k}p_{a}/ + /B_{k}p_{b}/ + ... + /K_{k}p_{k}/)(1 + /R/) = /Kp_{k}/
   #+end_verse
-*** 41. Unique set of positive multipliers
-#+NAME: section_41
+*** <<section_41>>41. Unique set of positive multipliers
 We can show now there can be no more than one set of positive
 multipliers! We will enumerate the steps in Sraffa's proof...
 
@@ -1194,8 +1153,7 @@ multipliers! We will enumerate the steps in Sraffa's proof...
    /p/'s. We can therefore conclude there exists always one and only one
    value of /R/ and a corresponding set of positive multipliers (/q/'s)
    which transform a given economic system into a Standard system.
-*** 42. Positive multipliers correspond to /lowest/ value of /R/
-#+NAME: section_42
+*** <<section_42>>42. Positive multipliers correspond to /lowest/ value of /R/
 - We can show a corollary: the value of /R/ which corresponds to
   all-positive prices (which we shall call /R'_{}/) is the *lowest* of
   the /k/ possible values of /R/.
@@ -1264,8 +1222,7 @@ multipliers! We will enumerate the steps in Sraffa's proof...
     expressed in terms of the Standard commodity formed by means of
     all-positive multipliers and which corresponds to /R'_{}/.
 
-*** 43. Standard product replace by equivalent quantity of labor
-#+NAME: section_43
+*** <<section_43>>43. Standard product replace by equivalent quantity of labor
 - The Standard commodity has been a purely auxiliary construction. We
   can present the essential element of the mechanism without having to
   resort to the Standard commodity.
@@ -1334,8 +1291,7 @@ multipliers! We will enumerate the steps in Sraffa's proof...
   - Then the prices of commodities being expressed in terms of such
     quantity of labor, we can find its wage in terms of any commodity
     through taking the reciprocal of the price for that commodity.
-*** 44. Wage or rate of profits as independent variable
-#+NAME: section_44
+*** <<section_44>>44. Wage or rate of profits as independent variable
 - The last steps of the preceding argument led us to reverse the
   practice followed from the outset: treating the wage rater than the
   rate of profits as the independent variable (or "given" quantity).
@@ -1356,14 +1312,12 @@ multipliers! We will enumerate the steps in Sraffa's proof...
 - *Convention.* The following sections will treat the rate of profits as
   the independent variable.
 ** Ch. 6. Reduction to Dated Labor
-*** 45. Cost of production aspect
-#+NAME: section_45
+*** <<section_45>>45. Cost of production aspect
 - Sraffa considers prices from their "cost of production" aspect, and
   examines the way they "resolve themselves" into wages and profits.
 - Sraffa would have introduced the argument earlier "had it not been for
   the necessity of following one line of argument at a time".
-*** 46. "Reduction" defined
-#+NAME: section_46
+*** <<section_46>>46. "Reduction" defined
 - *Definition.* We call "Reduction to Dated Quantities of Labor" (or
   "/Reduction/" for short) an operation where the equation for a
   commodity, the different means of production used are replaced with
@@ -1422,114 +1376,64 @@ multipliers! We will enumerate the steps in Sraffa's proof...
   the sole determinant of the price of the product.
   - Mathematically, this makes sense since /w/ = 0 when /r/ = /R/. Hence
     the infinite series sums infinitely many zeros.    
-*** 47. Pattern of movement of individual terms with changes in distribution
-#+NAME: section_47
-*** 48. Movement of an aggregate of terms
-#+NAME: section_48
-*** 49. Rate of fall of prices cannot exceed rate of fall of wages
-#+NAME: section_49
+*** <<section_47>>47. Pattern of movement of individual terms with changes in distribution
+*** <<section_48>>48. Movement of an aggregate of terms
+*** <<section_49>>49. Rate of fall of prices cannot exceed rate of fall of wages
 * Part II. Multiple-Product Industries and Fixed Capital
 ** Ch. 7. Joint Production
-*** 50. Two methods of production for two joint products; or, one method for producing them and two methods for using them in the production of a third commodity
-#+NAME: section_50
-*** 51. A system of universal joint products
-#+NAME: section_51
-*** 52. Complications in constructing the Standard System
-#+NAME: section_52
+*** <<section_50>>50. Two methods of production for two joint products; or, one method for producing them and two methods for using them in the production of a third commodity
+*** <<section_51>>51. A system of universal joint products
+*** <<section_52>>52. Complications in constructing the Standard System
 ** Ch. 8. The Standard System with Joint Products
-*** 53. Negative Multipliers: I. Proportions of Production Incompatible with Proportions of Use
-#+NAME: section_53
-*** 54. Negative Multipliers: II. Basic and non-basic jointly produced.
-#+NAME: section_54
-*** 55. Negative Multipliers: III. Special raw material
-#+NAME: section_55
-*** 56. Interpretation of negative components of the Standard commodity
-#+NAME: section_56
-*** 57. Basics and non-basics, new definition required
-#+NAME: section_57
-*** 58. Three types of non-basics
-#+NAME: section_58
-*** 59. Example of the third type
-#+NAME: section_59
-*** 60. General definition.
-#+NAME: section_60
-*** 61. Elimination of non-basics.
-#+NAME: section_61
-*** 62. The system of Basic equations
-#+NAME: section_62
-*** 63. Construction of the Standard system
-#+NAME: section_63
-*** 64. Only the lowest value of /R/ economically significant 
-#+NAME: section_64
-*** 65. Tax on non-basic product leaves rate of profits and prices of other products unaffected
-#+NAME: section_65
+*** <<section_53>>53. Negative Multipliers: I. Proportions of Production Incompatible with Proportions of Use
+*** <<section_54>>54. Negative Multipliers: II. Basic and non-basic jointly produced.
+*** <<section_55>>55. Negative Multipliers: III. Special raw material
+*** <<section_56>>56. Interpretation of negative components of the Standard commodity
+*** <<section_57>>57. Basics and non-basics, new definition required
+*** <<section_58>>58. Three types of non-basics
+*** <<section_59>>59. Example of the third type
+*** <<section_60>>60. General definition.
+*** <<section_61>>61. Elimination of non-basics.
+*** <<section_62>>62. The system of Basic equations
+*** <<section_63>>63. Construction of the Standard system
+*** <<section_64>>64. Only the lowest value of /R/ economically significant 
+*** <<section_65>>65. Tax on non-basic product leaves rate of profits and prices of other products unaffected
 ** Ch. 9. Other Effects of Joint Production
-*** 66. Quantity of labor embodied in two commodities jointly produced by two processes
-#+NAME: section_66
-*** 67. Quantity of labor embodied in two commodities jointly produced by only one process
-#+NAME: section_67
-*** 68. Reduction to dated quantities of labor not generally possible
-#+NAME: section_68
-*** 69. No certainty that all prices will remain positive as wage varies
-#+NAME: section_69
-*** 70. Negative quantities of labor
-#+NAME: section_70
-*** 71. Rate of fall of prices no longer limited by rate of fall of wages
-#+NAME: section_71
-*** 72. Implication of this.
-#+NAME: section_72
+*** <<section_66>>66. Quantity of labor embodied in two commodities jointly produced by two processes
+*** <<section_67>>67. Quantity of labor embodied in two commodities jointly produced by only one process
+*** <<section_68>>68. Reduction to dated quantities of labor not generally possible
+*** <<section_69>>69. No certainty that all prices will remain positive as wage varies
+*** <<section_70>>70. Negative quantities of labor
+*** <<section_71>>71. Rate of fall of prices no longer limited by rate of fall of wages
+*** <<section_72>>72. Implication of this.
 ** Ch. 10. Fixed Capital
-*** 73. Fixed capital as a kind of joint product.
-#+NAME: section_73
-*** 74. Machines of different ages regarded as different products
-#+NAME: section_74
-*** 75. Annual charge on a durable instrument calculated by the annuity method
-#+NAME: section_75
-*** 76. The same calculated by the joint-production equations method
-#+NAME: section_76
-*** 77. The equations method more general
-#+NAME: section_77
-*** 78. Different depreciation of similar instruments in different uses
-#+NAME: section_78
-*** 79. Reduction to dated quantities of labor generally impossible with fixed capital
-#+NAME: section_79
-*** 80. How book-value of machine varies with age if /r/ = 0
-#+NAME: section_80
-*** 81. Quantity of labor "contained" in a partly used-up machine
-#+NAME: section_81
-*** 82. How book-value varies with age if /r/ > 0
-#+NAME: section_82
-*** 83. Variation of book-value of complete set of machines of all ages with variation of /r/
-#+NAME: section_83
-*** 84. Fixed capital in the Standard system
-#+NAME: section_84
+*** <<section_73>>73. Fixed capital as a kind of joint product.
+*** <<section_74>>74. Machines of different ages regarded as different products
+*** <<section_75>>75. Annual charge on a durable instrument calculated by the annuity method
+*** <<section_76>>76. The same calculated by the joint-production equations method
+*** <<section_77>>77. The equations method more general
+*** <<section_78>>78. Different depreciation of similar instruments in different uses
+*** <<section_79>>79. Reduction to dated quantities of labor generally impossible with fixed capital
+*** <<section_80>>80. How book-value of machine varies with age if /r/ = 0
+*** <<section_81>>81. Quantity of labor "contained" in a partly used-up machine
+*** <<section_82>>82. How book-value varies with age if /r/ > 0
+*** <<section_83>>83. Variation of book-value of complete set of machines of all ages with variation of /r/
+*** <<section_84>>84. Fixed capital in the Standard system
 ** Ch. 11. Land
-*** 85. Similarity of rent-earning natural resources with non-basic products
-#+NAME: section_85
-*** 86. Differential rent
-#+NAME: section_86
-*** 87. Rent on land of a single quality
-#+NAME: section_87
-*** 88. Relation of rent to "extensive" and "intensive" diminishing returns
-#+NAME: section_88
-*** 89. Multiplicity of agricultural products
-#+NAME: section_89
-*** 90. The distinction between "single-products system" and "multiple-products system", revised
-#+NAME: section_90
-*** 91. Quasi-rents
-#+NAME: section_91
+*** <<section_85>>85. Similarity of rent-earning natural resources with non-basic products
+*** <<section_86>>86. Differential rent
+*** <<section_87>>87. Rent on land of a single quality
+*** <<section_88>>88. Relation of rent to "extensive" and "intensive" diminishing returns
+*** <<section_89>>89. Multiplicity of agricultural products
+*** <<section_90>>90. The distinction between "single-products system" and "multiple-products system", revised
+*** <<section_91>>91. Quasi-rents
 * Part III. Switch in Methods of Production
 **  Ch. 12. Switch in Methods of Production
-*** 92. Simple case, non-basic products.
-#+NAME: section_92
-*** 93. Basic products: both method and system switched.
-#+NAME: section_93
-*** 94. Condition for a rise in the rate of profits invariably leading to a switch to a higher Standard ratio
-#+NAME: section_94
-*** 95. Throughout a series of switches from system to system (provided they are single-products systems) to a higher rate of profits corresponds to a fall in the wage
-#+NAME: section_95
-*** 96. Switch of methods in multiple-products systems
-#+NAME: section_96
+*** <<section_92>>92. Simple case, non-basic products.
+*** <<section_93>>93. Basic products: both method and system switched.
+*** <<section_94>>94. Condition for a rise in the rate of profits invariably leading to a switch to a higher Standard ratio
+*** <<section_95>>95. Throughout a series of switches from system to system (provided they are single-products systems) to a higher rate of profits corresponds to a fall in the wage
+*** <<section_96>>96. Switch of methods in multiple-products systems
 * Appendices
-** On Sub-Systems
-#+NAME: appendix_a
+** <<appendix_a>>On Sub-Systems
+
