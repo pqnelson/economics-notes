@@ -1377,8 +1377,150 @@ multipliers! We will enumerate the steps in Sraffa's proof...
   - Mathematically, this makes sense since /w/ = 0 when /r/ = /R/. Hence
     the infinite series sums infinitely many zeros.    
 *** <<section_47>>47. Pattern of movement of individual terms with changes in distribution
+- As the rate of profits rises, the value for each of the labor terms is
+  pulled in the opposite direction by the rate of profits and by the
+  wage...and it moves up or down as the one or the other prevails.
+- The relative weight of these two factors varies at different levels of
+  distribution. Besides, it varies differently in the case of terms of
+  different "date", as we shall see.
+- We have seen (\sect[[section_30][30]]) that --- if wage is expressed in terms of the
+  Standard net product — when the rate of profits /r/ changes, the wage /w/
+  moves as
+  \begin{equation}
+  w = 1 - \frac{r}{R}
+  \end{equation}
+  where /R/ is the maximum rate of profits.
+- Substituting this expression for the wage in each term in the
+  reduction equation, the general form of any nth labor term becomes
+  \begin{equation}
+  L_{a_{n}}\left(1 - \frac{r}{R}\right) (1 + r)^{n}
+  \end{equation}
+  Consider the values (for this expression) as /r/ moves from 0 to its
+  maximum /R/.
+  - At /r/ = 0, the value for a labor term depends exclusively on its
+    size regardless of date.
+  - With a rise in the rate of profits, terms fall into two groups:
+    1. those that correspond to labor done in more recent past (which
+       begin at once to fall in value and fall steadily throughout);
+    2. those representing labor more remote in time (which rise at
+       first, then as each of them reaches its maximum value, turn and begin
+       downward movement).
+  - In the end, at /r/ = /R/, the wage vanishes and with it vanishes the
+    value of each labor term.
+  - This is best shown by a selection of curves, representing terms of
+    widely different dates /n/ and different quantities of labor. Lets doodle
+    this when /R/ is 25%. 
+    
+    [[./reductionTerms.png]]
+
+    Variation in value of "Reduction terms" of different periods 
+    $L_{n}w(1 + r)^{n}$ relative to the Standard commodity as the rate of
+    profits varies between zero and /R/ (assumed to be 25%).
+
+    The quantities of labor (/L_{n}/) in various "terms", which have been
+    chosen so as to keep the curves within the page, are as follows: 
+    /L_{0}/ = 1.04 (dashed black line); /L_{4}/ = 1 (orange line); 
+    /L_{8}/ = .76 (red line); /L_{15}/ = .29 (green line); 
+    /L_{25}/ = .0525 (blue line); /L_{50}/ = 0.0004 (solid black line).
+- It is as if the rate of profits (when moving from 0 to /R/) generate a
+  wave along the row of labor terms, the crest formed by successive
+  terms, as one after another reach their maximum value.
+  - At any value of the rate of profits, the term which reaches its
+    maximum has the "date" 
+    \begin{equation}
+    n = \frac{1 + r}{R - r}
+    \end{equation}
+  - Conversely, the rate of profits at which any term of date /n/ is at
+    its maximum when 
+    \begin{equation}
+    r = R - \frac{1 + R}{n + 1}
+    \end{equation}
+  - Accordingly, all terms for which $n\leq R^{-1}$ have their maximum
+    at /r/ = 0 and thus form the group of "recent dates" mentioned above
+    as falling in value for increasing /r/. 
 *** <<section_48>>48. Movement of an aggregate of terms
+- The labor terms may be regarded as the constituent elements of the
+  price of a commodity, the combination of which may (with variation
+  in the rate of profits) give rise to complicated patterns of
+  price-movement, with several ups and downs.
+- The simplest case, the "balanced commodity" (\sect[[section_21][21]]) or its equivalent,
+  where the Standard commodity taken as an aggregate: its Reduction
+  would result in a regular series, the quantity of labor for any term
+  being (1 + /R/) times the quantity in the term immediately preceding it
+  in date.
+- Consider a complicated example: we suppose two products which differ
+  in three of their labor terms, while being identical in all others.
+  - One of them, /a/, has an excess of 20 units labor applied 8 years
+    before, whereas the excess of the other, /b/, consists of 19 units
+    employed in the current year and 1 unit bestowed 25 years prior.
+  - (They are thus not unlike the familiar instances, respectively, of
+    the wine aged in the cellars and of the old oak made into a chest.)
+  - The difference between their Standard prices at various rates of
+    profit, i.e. 
+    \begin{equation}
+    p_{a} - p_{b} = 20w (1+r)^{3}  - (19w + w(1+r)^{25})
+    \end{equation}
+    is represented in the following figure:
+    [[./priceDiffs.png]]
+- The price of "old wine" rises relative to the "oak chest" when the
+  rate of profits move from 0 to 9%, then falls between 9% and 22% to
+  rise again from 22% to 25%.
+- (The reduction to dated labor has some bearing on the attempts to find
+  in the "period of production" an independent measure of the quantity
+  of capital which could be used --- without circular reasoning --- for
+  determining prices and the shares in distribution.
+
+  (But the case just considered seems conclusive showing the
+  impossibility of aggregating the "periods" belonging to several
+  quantity of labor into a single magnitude which could be regarded as
+  representing the quantity of capital.
+
+  (The reversals in direction of the movement of relative prices, in the
+  face of unchanged methods of production, cannot be reconciled with *any*
+  notion of capital as measurable quantity independent of distribution
+  and prices.)
+  - In this parenthetic remark, Sraffa just decimated the Neoclassical
+    theory of production.
 *** <<section_49>>49. Rate of fall of prices cannot exceed rate of fall of wages
+- Something restricts the movement of any product's price: if (as a
+  result of a rise in the rate of profits) the price falls, its rate of
+  fall cannot exceed the rate of fall of the wage.
+- So, if we draw two lines showing how the price for product /a/ and the
+  wage (both expressed in terms of the Standard commodity) vary with the
+  rise of the rate of profit, we see the price line cannot cut the wage
+  line more than once...and even then, only in one direction: such that
+  the price (from being lower) becomes higher than the wage with the
+  rise of the rate of profits.
+  [[./priceRestrict.png]]
+- How to see this? We may look at the Reduction series or the original
+  production equations for /a/. Sraffa considers the former.
+  - The only variables (besides the price for /a/) are the wage and rate
+    of profits, which rises with the fall of the wage...the combined effect of
+    the two can never fall in the price more than in proportion to that of
+    the wage. 
+  - Sraffa next considers the production equation for commodity /a/. The
+    prices for the means of production might upset the proposition if
+    they were themselves capable of falling at a greater rate.
+    
+    But to see this is impossible, it is sufficient to turn our
+    attention to the product whose rate of fall exceeds that of all
+    others: this product (since it cannot have means of production
+    capable of falling at a greater rate than it does) must itself fall
+    less than wage.
+- The conclusion is not affected if we take as measure of wages and
+  prices any arbitrarily chosen product (instead of the Standard
+  commodity), since what we are concerned with is the price-relation
+  between labor and the given product...a relation which is *independent*
+  of the medium adopted.
+- It follows if wage is cut in terms of *any* commodity (no matter whether
+  it is one that will rise or fall relative to the Standard commodity)
+  the rate of profits will rise...and vice-versa for an increase of the
+  wage.
+- It also follows, if wage is cut in terms of one commodity, it is
+  thereby cut in terms of all...and similarly for an increase. The
+  direction of change is the same in relation to all commodities,
+  however different may be the extent. 
+
 * Part II. Multiple-Product Industries and Fixed Capital
 ** Ch. 7. Joint Production
 *** <<section_50>>50. Two methods of production for two joint products; or, one method for producing them and two methods for using them in the production of a third commodity
