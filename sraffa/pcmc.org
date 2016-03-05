@@ -20,7 +20,7 @@
     brewery produces beer (duh) and animal feed (from the used up [[https://en.wikipedia.org/wiki/Mashing][mash]])
     immediately. Since this brewery example is needlessly complicated,
     and distracts from the underlying ideas, we'll put it on the back
-    burner until later.
+    burner until later (\sect\sect[[section_53][53]]--[[section_72][72]]).
 - *Assumption (Cycle of Exchange).*
   Commodities are exchanged at a market held after the harvest.
   - In practice this means we are assuming a discrete time variable. The
@@ -1375,7 +1375,12 @@ multipliers! We will enumerate the steps in Sraffa's proof...
 - Sraffa notes only at /r/ = /R/ the residue becomes all-important as
   the sole determinant of the price of the product.
   - Mathematically, this makes sense since /w/ = 0 when /r/ = /R/. Hence
-    the infinite series sums infinitely many zeros.    
+    the infinite series sums infinitely many zeros. So what?
+    
+    Well, then the reduction equation becomes inconsistent, i.e., 0 +
+    0 + 0 + ... = /Ap_{a}/ unless /p_{a}/ = 0 or /A/ = 0.
+  - I suspect it is on this premise Sraffa asserts the necessity for a
+    "commodity residue".
 *** <<section_47>>47. Pattern of movement of individual terms with changes in distribution
 - As the rate of profits rises, the value for each of the labor terms is
   pulled in the opposite direction by the rate of profits and by the
@@ -1398,7 +1403,7 @@ multipliers! We will enumerate the steps in Sraffa's proof...
   Consider the values (for this expression) as /r/ moves from 0 to its
   maximum /R/.
   - At /r/ = 0, the value for a labor term depends exclusively on its
-    size regardless of date.
+    size regardless of date, i.e., looks like /L_{a(n)}/ multiplied by unity.
   - With a rise in the rate of profits, terms fall into two groups:
     1. those that correspond to labor done in more recent past (which
        begin at once to fall in value and fall steadily throughout);
@@ -1418,10 +1423,13 @@ multipliers! We will enumerate the steps in Sraffa's proof...
     profits varies between zero and /R/ (assumed to be 25%).
 
     The quantities of labor (/L_{n}/) in various "terms", which have been
-    chosen so as to keep the curves within the page, are as follows: 
-    /L_{0}/ = 1.04 (dashed black line); /L_{4}/ = 1 (orange line); 
-    /L_{8}/ = .76 (red line); /L_{15}/ = .29 (green line); 
-    /L_{25}/ = .0525 (blue line); /L_{50}/ = 0.0004 (solid black line).
+    chosen so as to keep the curves within the page, are as follows:
+    - /L_{0}/ = 1.04 (dashed black line);
+    - /L_{4}/ = 1 (orange line);
+    - /L_{8}/ = .76 (red line);
+    - /L_{15}/ = .29 (green line);
+    - /L_{25}/ = .0525 (blue line);
+    - /L_{50}/ = 0.0004 (solid black line).
 - It is as if the rate of profits (when moving from 0 to /R/) generate a
   wave along the row of labor terms, the crest formed by successive
   terms, as one after another reach their maximum value.
@@ -1465,22 +1473,22 @@ multipliers! We will enumerate the steps in Sraffa's proof...
 - The price of "old wine" rises relative to the "oak chest" when the
   rate of profits move from 0 to 9%, then falls between 9% and 22% to
   rise again from 22% to 25%.
-- (The reduction to dated labor has some bearing on the attempts to find
-  in the "period of production" an independent measure of the quantity
-  of capital which could be used --- without circular reasoning --- for
-  determining prices and the shares in distribution.
-
-  (But the case just considered seems conclusive showing the
-  impossibility of aggregating the "periods" belonging to several
-  quantity of labor into a single magnitude which could be regarded as
-  representing the quantity of capital.
-
-  (The reversals in direction of the movement of relative prices, in the
-  face of unchanged methods of production, cannot be reconciled with *any*
-  notion of capital as measurable quantity independent of distribution
-  and prices.)
-  - In this parenthetic remark, Sraffa just decimated the Neoclassical
-    theory of production.
+- Sraffa makes the following cryptic parenthetical, which decimates the
+  Neoclassical theory of production. As I read it, there are three
+  propositions made, which I group together thusly, and I insert
+  parentheses to keep with Sraffa's writing:
+  - (The reduction to dated labor has some bearing on the attempts to find
+    in the "period of production" an independent measure of the quantity
+    of capital which could be used --- without circular reasoning --- for
+    determining prices and the shares in distribution.)
+  - (But the case just considered seems conclusive showing the
+    impossibility of aggregating the "periods" belonging to several
+    quantity of labor into a single magnitude which could be regarded as
+    representing the quantity of capital.)
+  - (The reversals in direction of the movement of relative prices, in the
+    face of unchanged methods of production, cannot be reconciled with *any*
+    notion of capital as measurable quantity independent of distribution
+    and prices.)
 *** <<section_49>>49. Rate of fall of prices cannot exceed rate of fall of wages
 - Something restricts the movement of any product's price: if (as a
   result of a rise in the rate of profits) the price falls, its rate of
@@ -1512,11 +1520,13 @@ multipliers! We will enumerate the steps in Sraffa's proof...
   commodity), since what we are concerned with is the price-relation
   between labor and the given product...a relation which is *independent*
   of the medium adopted.
-- It follows if wage is cut in terms of *any* commodity (no matter whether
+- *Conclusion 1: Wages cut into Profits.*
+  It follows if wage is cut in terms of *any* commodity (no matter whether
   it is one that will rise or fall relative to the Standard commodity)
   the rate of profits will rise...and vice-versa for an increase of the
   wage.
-- It also follows, if wage is cut in terms of one commodity, it is
+- *Conclusion 2: Wage variations are felt across the economy.*
+  It also follows, if wage is cut in terms of one commodity, it is
   thereby cut in terms of all...and similarly for an increase. The
   direction of change is the same in relation to all commodities,
   however different may be the extent. 
