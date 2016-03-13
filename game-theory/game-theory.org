@@ -1,0 +1,412 @@
+#+TITLE:     Notes on Game Theory
+#+AUTHOR:    Alex Nelson
+#+EMAIL:     anelson@unfold.com
+#+DATE:      <2016-03-11 Fr>
+#+LANGUAGE:  en
+#+HTML_HEAD:     <style>body { font-family: "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif; }</style>
+#+HTML_HEAD:     <style>li {line-height: 23px;} body { width: 600px; line-height: 23px; }</style>
+# font: 15px Arial,Tahoma,Helvetica,FreeSans,sans-serif;color: rgb(74, 74, 74); }</style>
+#+OPTIONS:   H:6 num:nil toc:2
+
+* Assumptions of Game Theory
+- Motivating Example
+  - Suppose we observe people playing a card game.
+    - It's a "structured" activity, in some sense.
+    - But /who/ is doing /what/? And /why/?
+    - The natural approach to this problem is to break it up into components.
+  - Decomposing the game.
+    - *Rules specify possible actions.*
+      First we need to know the rules of the game.
+      - The rules tell us what actions are permitted.
+    - *Picking an Action.*
+      Then we need to know how people select an action from those
+      that are permitted.
+  - "How people select an action"
+    - Our approach + first 2 assumptions address this problem.
+    - One assumption focuses on what we should assume about
+      what motivates each person
+    - The other assumptions helps with the tricky issue:
+      what each thinks the other will do in any set of circumstances
+** Individual Action is Instrumentally Rational
+- Individuals who are instrumentally rational have
+  preferences over various "things"
+  - Examples:
+    - bread > toast
+    - toast + honey > bread + butter
+    - rock > classical music
+  - They are deemed "rational" because they select actions
+    which /best/ satisfy those preferences
+- Virtue: very little needs to be assumed about a person's preferences
+- Rationality is cast in a "means-end" framework with the
+  task of selecting the "most appropriate" means for achieving certain ends
+  - Preferences must be coherent in only a weak sense: we must
+    be able to talk about satisfying them, more or less.
+  - We must have a "preference ordering"
+    - Only when preferences are ordered will we be able to begin
+      making judgments about how different actions satisfy our
+      preferences in different degrees
+*** Ordinal Utilities, Cardinal Utilities, Expected Utilities
+- David Hume's /Treatise on Human Nature/, Book II, Ch. 3, section 3
+  "Of the Influencing Motives of the Will":
+  #+BEGIN_QUOTE
+  We speak not strictly and philosophically when we talk of the combat
+  of passion and reason. Reason is, and ought only to be the slave
+  of the passions, and can never pretend to any other office than
+  to serve and obey them.
+  #+END_QUOTE
+**** Ordinal Utilities: "Helper Numbers"
+- If we have two options, /X/ and /Y/, then we could consider
+  assigning some hypothetical amount of "utility" to each of
+  them, /u(X)/ and /u(Y)/.
+  - We can then order the preferences, since they must be
+    distinct numbers.
+  - But the assignment /u(X)/ and /u(Y)/ are arbitrary,
+    provided they preserve the preference /X/ > /Y/
+- Consequences
+  1. The numbers convey nothing about the strength of preferences
+  2. There's no way one person's ordinal utility from /X/
+     can be compared to /another/ person's ordinal utility from /Y/
+     - It is meaningless "across persons"
+     - This is why utility maximization doesn't automatically
+       connect Neoclassical economics and game theory to
+       traditional utilitarianism
+- Ordinal utilities are "good enough" for simple problems
+  - Complicated problems require information on strength of preferences
+**** Cardinal Utilities: Measuring the Strength of Preferences
+- Cardinal utility makes /u(X)/ and /u(Y)/ measure the strength
+  of preferring action /X/ and /Y/, respectively.
+  + In some sense, there are "units" to these values /u(X)/ and /u(Y)/
+  + These "units" of utility, or "utils", are highly dubious to me
+- Cardinal utilities allow the calculus of desire to convert
+  decision problems from one of "utility maximization" to one of
+  "utility maximization /on average/"
+  - I.e., the problem becomes a maximization of /expected utility/
+- Example:
+  - Problem statement
+    - The probability of rain is 50%
+    - Do we walk or drive to the library?
+  - Cardinal utility preferences
+    - Walk in the rain = 10 utils
+    - Walk but no rain = 0 utils
+    - Drive in the rain = 1 util
+    - Drive but no rain = 6 utils
+  - Expected utility from walking: 
+    0.5*[(10 utils) + (0 utils)] = 5 utils
+  - Expected utility from driving: 
+    0.5*[(6 utils) + (1 util)] = 3.5 utils
+  - Maximizing the expected utility implies we should walk.
+- For cases when outcome is uncertain,
+  - Cardinal utilities are necessary
+  - Expected utility maximization provides the metaphor
+    for what drives action
+- Corollary: whenever we encounter expected utility,
+  cardinal utilities are implied
+- Warning: one person's cardinal utility numbers are
+  still incomparable with another's
+  - The assignment /u(.)/ is subjective and incomparable.
+- Game theory operates this way: you have a cardinal utility function,
+  and you behave as though you maximized expected utility
+*** Problems with expected utility theory ("Instrumental Rationality") 
+**** Empirical Evidence
+- There is a growing literature of experiments testing the predictions
+  of "expected utility", and finding different results
+  - Care is required for interpreting these results
+  - When people play games with uncertainty attached to decision making
+    is bound up with anticipating what others will do
+  - Even in other settings (e.g., the lottery), we witness violations of
+    predictions made from the expected utility axiom.
+- It's still feasible to /naively/ use expected utility /prescriptively/
+  - This transforms game theory from an /explanatory/ to a
+    /prescriptive/ tool
+  - Sadly this response undermines the usefulness of game theory :(
+**** Internal Critique
+- Can all human projects be represented instrumentally as action on a
+  preference ordering? 
+  + A. Sen's "Rational Fools".
+    [[http://www.jstor.org/stable/2264946?origin=JSTOR-pdf][Philosophy & Public Affairs]] *6* no.4 (1977) 317--334
+- Problem of spontaneity
+  - Some people value "being spontaneous"
+  - But in an means-ends model of instrumentally rational action, how do
+    we model spontaneity?
+  - Most attempts that I think of...completely undermine the objective
+    of being spontaneous
+  - *Reference:*
+    + J. Elster, 
+      /Sour Grapes: Studies in the Subversion of Rationality/.
+      Cambridge: CUP, 1983.
+- Can all motives reduce to a utility representation?
+  - Isn't honor as important as thirst and hunger?
+  - We're quickly getting into the muck of philosophy...
+  - *References:*
+    + Martin Hollis, /The Cunning of Reason/.
+      Cambridge: Cambridge University Press, 1987.
+    + Martin Hollis, [[http://www.britac.ac.uk/pubs/proc/files/75p163.pdf][Honour Among Thieves]].
+      /Proceedings of the British Academy/ *75* (1989) 163--180.
+**** Problems from Philosophers
+- There's an entire philosophical tradition imposing additional
+  constraints to rational behaviour
+  - Immanuel Kant's [[https://en.wikisource.org/wiki/Groundwork_of_the_Metaphysics_of_Morals][/Groundwork of the Metaphysics of Morals/]] (First section, paragraphs 5--6, emphasis Kant's):
+    #+BEGIN_QUOTE
+    Now in a being which has reason and a will, if the proper object of
+    nature were its /conservation/, its /welfare/, in a word, its
+    /happiness/, then nature would have hit upon a very bad arrangement
+    in selecting the reason of the creature to carry out this
+    purpose. [...]
+
+    For as reason is not competent to guide the will with certainty in
+    regard to its objects and the satisfaction of all our wants (which
+    it to some extent even multiplies), ..., its true destination must
+    be to produce a /will/, not merely good as a /means/ to something
+    else, but /good in itself/, for which reason was absolutely
+    necessary.
+    #+END_QUOTE
+    - If I'm reading this correctly, "reason" should guide the /ends/ we
+      pursue, not the /means/.
+    - How? My reading of Kant suggests /reason supplies a negative
+      constraint/...or that's Kant's thinking, insofar as I understand 
+      him.
+  - "Rational" behaviour also depends on time & place
+    - Is it reasonable to own a human being as a slave?
+      - Kant argues this is /wrong/ morally, because the categorical
+        imperative says "owning a human" is morally wrong.
+      - But only because Kant views a slave as a human being.
+        This is also why we abhor slavery.
+      - But in ancient Rome, slaves weren't considered people.
+        So ancient Romans weren't disturbed by this practice, nor
+        would they be if they applied the categorical imperative.
+    - If we accept this previous example, then "What is rational"
+      depends on time and place
+**** Psychological Problems
+- Cognitive Dissonance
+  - Reason works to "rationalize" action rather than guide it
+  - There is a lot of evidence that we both (a) change our preferences,
+    and (b) change our beliefs, bout how actions contribute to
+    preference satisfaction, hence rationalizing the actions we have
+    taken
+    - E. Aronson's /The Social Animal/ (New York: W.H.Freeman 1988)
+  - Examples:
+    + Smokers have systematically biased views of the danger of smoking
+    + Workers in risky occupations underestimate the risks of their jobs
+    + People seek out and read ads for the brand of car they have just
+      bought
+**** Source of Beliefs
+- Consider two problems:
+  1. It might rain, with probability 50%. Should we walk to work or not?
+  2. My friend might walk to work, with probability 75%, and I'd like
+     to walk with my friend. Should I walk to work or not?
+- These problems appear similar, because we have some seemingly random
+  event (rain, our friend walking to work) which we use to compute the
+  expected utility.
+- But rain has no motivation...our friend /might/ want to walk with us,
+  which would then affect the probability of their walking to work
+  (as opposed to their driving to work).
+- Consider models in two situations.
+  - A meteorological model is "good" if it "works", i.e., if it predicts
+    rain, then it "usually" rains. If it predicts incorrectly "too
+    often", then it's rubbish.
+  - A traffic congestion model might be initially "good", but once it
+    gets a good reputation...then everyone uses it, and its predictions
+    are broadcast on the radio...causing everyone's behaviour to
+    /change/. Thus rendering its predictions /false/.
+  - *Moral:* proving or disproving beliefs about the social world
+    is trickier than those about the natural world
+  - *Corollary:* it's entirely unclear how to acquire beliefs rationally
+- Game theorists agree, generally, belief formation obeys
+  [[https://en.wikipedia.org/wiki/Bayes'_rule][Bayes' rule]], at least when /updating/ beliefs.
+  - Loosely, beliefs ("priors") generate probabilities.
+    Bayes' rule tells us explicitly how to update
+    probabilities based on new evidence that may challenge or reinforce
+    our beliefs.
+  - But where do the original expectations come from?
+  - I.e., in the absence of evidence, how do agents form probability
+    assessments governing events (like the behaviour of others)?
+- *Solution One*
+  - People do not passively have expectations
+  - They make a conscious decision over how much information to look
+    for
+  - What determines the amount of effort agents put into looking for
+    information?
+  - Instrumentally rational agents will keep acquiring information to
+    the point where the last bit of search effort costs them in utility
+    terms the same amount as the amount of utility they expect to get
+    from the information gained by the last bit of effort
+    - Information, here, is used in the [[https://en.wikipedia.org/wiki/Entropy_%28information_theory%29][technical sense]]
+  - But how does the agent know how to evaluate the potential utility
+    gains from a bit more information
+    /prior to gaining that information?/
+  - Naive answer: through acquiring information about the (value of
+    information gathered) up to the point where the marginal benefits of
+    this "second-order information" (information about the usefulness of
+    the information gathered) were equal to the costs.
+    - But this opens up an infinite regress, where we can ask the same
+      question of how the agent knows the value of this second-order
+      information
+    - How to prevent this "infinite regress"?
+  - We must be guided by something /in addition/ to instrumental calculation
+    - But this implies instrumentally rational choices is incomplete
+    - Or else the agent already knows everything.
+- *Solution Two* (from Neoclassical economists)
+  - Treat beliefs as subjective assessments
+  - Has the virtue of avoiding the problem of rational information
+    acquisition by turning subjective assessments into data
+    given exogeneously (i.e., it's put in, by hand, outside the
+    model)
+  - The disadvantage: it renders the instrumental model of action close
+    to vacuous.
+  - Illustrative example
+    - If expectations are purely subjective, perhaps any action
+      could result in the analysis of games (since any subjective
+      assessment is as good as another).
+  - Solution: supplement the assumption of "instrumental rationality"
+    with the assumption of "common knowledge of rationality" (apparently
+    abbreviated CKR).
+**** Common Knowledge of Rationality
+- Expectations of others' actions will influence what is instrumentally
+  rational for one to do.
+  - Hence fixing the beliefs rational agents hold about each other
+    provides the key to the analysis of rational actions in games.
+  - CKR contributes in this manner.
+- Basic game plan
+  - To make expectations of another's actions, simply model what
+    determines their behaviour, then use that model to predict what
+    they would do in the relevant circumstances
+  - Model the other player as instrumentally rational
+  - We assume there is common knowledge of rationality held by the
+    players
+- Complication arises
+  - I am instrumentally rational
+  - I know you are instrumentally rational
+  - You know I am instrumentally rational
+  - I know that you know I am instrumentally rational, but you know this
+  - You know I know you know I know, but I know this too
+  - Formally:
+    1. each person is instrumentally rational
+    2. Each person knows (1)
+    3. Each person knows (2)
+    4. Each person knows (3), and so on /ad infinitum/
+  - It's impossible to translate common knowledge about /X/ into a
+    finite sentence "I know /X/".
+    - The best we can do is an infinite sentence "I know Jack knows that
+      I know..."
+  - The Common Knowledge assumption can lead us anywhere
+    - See also:
+      Herbert Gintis.
+      [[http://www.umass.edu/preferen/You%20Must%20Read%20This/ckrcritique.pdf][Common Knowledge of Rationality is Self-Contradictory]].
+- Example
+  - I want to be fashionable
+  - If I treat other people as things, parameters like the weather,
+    I could plausibly collect information on how they behave and
+    update my beliefs using Bayes' rule (or just plain observation)
+  - But if I treat people as like-minded agents concerned about being
+    fashionable (i.e., use the strategy of Common Knowledge of
+    Rationality), then my world explodes
+  - I need to take into account what others wear
+  - What each of them will wear will depend on what they expect from
+    what others will wear (including me!)
+  - What each expects other to wear depends on what each expects each
+    other will expect to wear
+  - The situation spins hopelessly out of control
+  - Moral: don't be fashionable
+**** Consistent Alignment of Beliefs
+- Most game theorists assume CKR, but also assume consistently aligned
+  beliefs (CAB)
+- The jump from common knowledge of rationality to consistently
+  aligned beliefs is controversial, even among game theorists
+  - D. Kreps,
+    /Game Theory and economic modeling/.
+    New York: Oxford University Press, 1990.
+  - D. Bernheim,
+    [[http://www.econ.yale.edu/~dirkb/teach/pdf/b/bernheim/1984%20rationalizable%20strategic%20behavior.pdf]["Rationalisable strategic behaviour"]].
+    /Econometrica/ *52* (1984) 1007–28.
+  - D. Pearce,
+    [[http://www.econ.yale.edu/~dirkb/teach/pdf/p/pearce/1984%20rationalizability.pdf]["Rationalisable strategic behaviour and the problem of perfection"]].
+    /Econometrica/ *52* (1984) 1029–50.
+- Informally: no instrumentally rational person can expect another
+  similarly rational person who has the same information to develop
+  different thought processes.
+  - No rational person expects to be surprised by another rational
+    person
+  - The rational thought process becomes 1-dimensional, or even
+    zero-dimensional (you're either rational, or you're not)
+- This doesn't necessarily imply determinism (randomness still creeps in
+  from, e.g., the weather).
+- Robert Aumann argues (small modifications to convert fractions to
+  percentages, and I introduced the paragraph breaks):
+  #+BEGIN_QUOTE
+  Suppose you believe that the probability of rain tomorrow is 75%. And
+  suppose that I believe it to be 25%. On this basis, you could agree to
+  pay me $1 if it does not rain and I could agree to pay you $1 if it
+  does. Sounds reasonable? Not to game theorist in this tradition.
+
+  Notice that although the final payoff tomorrow will sum to zero (that
+  is, what I will win/lose and what you will lose/win sum to zero), this
+  is not so with the pay-offs we expect today. Each one of us expects
+  payoffs: $1 with probability 75% and -$1 with probability 25%. On
+  average, each expects to make 50 cents [$1 \times 3\frasl4 - $1
+  \times 1\frasl4 = $0.50].
+  
+  Thus our expectations are inconsistent with each other.
+
+  If we are both rational we can only disagree because we have different
+  evidence or information sets. In offering to make the bet, each one of
+  us reveals to the other some of what was previously "privately" held
+  information. You reveal that you have evidence which ought to temper
+  my confidence that it will be dry tomorrow and similarly I reveal to
+  you some of my evidence which ought to temper your confidence in the
+  rain.
+
+  Consequently each will want to revise their expectations of rain
+  tomorrow.
+
+  This exchange of information will continue so long as we disagree and
+  with each exchange the disagreement narrows until finally it disappears.
+  #+END_QUOTE
+  
+  Aumann, like Socrates, thought unique truths can be arrived at
+  through dialogue, and an opposition of incompatible positions will
+  give way to a uniform position acceptable to both sides once time
+  and communication have worked.
+- CAB then depends on the idea of an explicit dialogue in real time (i.e., [[http://papers.ssrn.com/sol3/papers.cfm?abstract_id=1855349][Historical Time]]).
+  - How and where this dialogue takes place, Aumann does not say.
+  - Without such a process there's no need for agreement. (Socrates'
+    demise confirms this.)
+  - Aumann's argument seems problematic for one-shot games: you play it
+    once, then realize afterwards you must have been holding some
+    different expectations.
+- But why should we expect rational agents faced with the same
+  information to draw the same conclusions?
+
+
+*** Action within the Rules of Games
+- Two more aspects of the way game theorists model social interactions
+  which strike many social scientsts as odd.
+  1. The assumption individuals know the rules of the game, i.e., they
+     know all the possible actions and how the actions combine to yield
+     particular payoffs for each player.
+  2. A person's motive for choosing a particular action is strictly
+     independent of the rules of the game (which structure the
+     opportunities for action).
+* Bibliography
+These are the books and articles I actually /used/ when writing these
+notes. 
+** Books
+- Shaun Hargreaves-Heap and Yanis Varoufakis,
+  /Game Theory: A Critical Introduction/.
+  Routledge, 1995.
+- Martin J. Osborne,
+  /An Introduction to Game Theory/.
+  Oxford University Press, 2004.
+*** Ancillary Books
+- E. Aronson,
+  /The Social Animal/.
+  New York: W.H.Freeman, 1988.
+- J. Elster, 
+  /Sour Grapes: Studies in the Subversion of Rationality/.
+  Cambridge: CUP, 1983.
+- Martin Hollis, /The Cunning of Reason/.
+  Cambridge: Cambridge University Press, 1987.
+** Articles 
+- A. Sen's "Rational Fools".
+  [[http://www.jstor.org/stable/2264946?origin=JSTOR-pdf][Philosophy & Public Affairs]] *6* no.4 (1977) 317--334
+- Martin Hollis, "[[http://www.britac.ac.uk/pubs/proc/files/75p163.pdf][Honour Among Thieves]]".
+  /Proceedings of the British Academy/ *75* (1989) 163--180.
