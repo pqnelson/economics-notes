@@ -14,29 +14,35 @@
 *** <<section_1>>1. Two Commodities 
 - We consider an economy with two commodities, producing just enough to
   maintain itself.
-- *Assumption.* Commodities are produced by separate industries.
+- *Assumption.* Commodities are produced by separate industries. I.e.,
+  an industry is assumed to produce exactly one output.
   - This is a simplifying assumption which can be lifted, a single
-    industry could produce multiple commodities. For example, a beer
-    brewery produces beer (duh) and animal feed (from the used up [[https://en.wikipedia.org/wiki/Mashing][mash]])
-    immediately. Since this brewery example is needlessly complicated,
-    and distracts from the underlying ideas, we'll put it on the back
-    burner until later (\sect\sect[[section_53][53]]--[[section_72][72]]).
-- *Assumption (Cycle of Exchange).*
-  Commodities are exchanged at a market held after the harvest.
+    industry could produce multiple commodities. For examples of "joint
+    production", where an industry produces multiple commodities:
+    - A beer brewery produces beer (duh) and animal feed (from the used
+      up [[https://en.wikipedia.org/wiki/Mashing][mash]]) immediately.
+    - Milking cows produce milk and dung (the dung can be aired out to
+      produce fertilizer).
+    - Sheep produce wool and mutton.
+  - Since these examples are needlessly complicated, and distracts
+    from the underlying ideas, we'll put it on the back burner until
+    later (\sect\sect[[section_53][53]]--[[section_72][72]]).
+- *Assumption (Cycle of Exchange).* Commodities are exchanged at a
+  market held after the harvest.
   - In practice this means we are assuming a discrete time variable. The
-    comic book picture I have, at least, is there's two snapshots: (1)
-    before production, at the start of the year; and (2) after
-    production, at the end of the year.
+    comic book "mental model" I have, at least, is there's two
+    snapshots: (1) before production, at the start of the year; and (2)
+    after production, at the end of the year.
   - Consequently, the only possibility for changes in the economy are at
     these annual events. In between these events, the economy is assumed
     to be unchanging. Because of this, the model being setup seems
     /static/ to me.
-- Wheat an iron are produced, representing sustenance for the
-  workers and the means of production (respectively). 
-- We suppose that 280 quarters of wheat and 12 tons of iron are used
-  to produce 400 quarters of wheat, whereas 120 quarters of wheat
-  and 8 tons of iron are used to produce 20 tons of iron. We
-  represent a year's operations as: \\
+- Wheat represents the sustenance for the workers /and/ the seed for the
+  fields, while iron stands for the means of production.
+- We suppose that 280 quarters of wheat and 12 tons of iron are used to
+  produce 400 quarters of wheat, whereas 120 quarters of wheat and 8
+  tons of iron are used to produce 20 tons of iron. We represent a
+  year's operations as: \\
 
   #+BEGIN_VERSE
    280 qr. wheat + 12 t. iron \to 400 qr. wheat
@@ -53,7 +59,14 @@
   possible for the process to repeat.
   - Such values "spring directly" from the methods of production.
   - Elementary linear algebra shows us 10 qr. wheat must be exchanged for
-    1 t. of iron.
+    1 t. of iron. This can be seen from, e.g., the iron method of
+    production, we have 120 /w/ + 8 /t/ = 20 /t/ where /w/ is the value
+    of one quarter wheat, /t/ is the value of one ton iron. Simple
+    arithmetic concludes 120 /w/ = 12 /t/ or 10 /w/ = /t/.
+  - *Do not* be lazy and think "Well, 400 quarters of wheat must
+    exchange for 20 tons of iron, hence 20 quarters of wheat must
+    exchange for 1 ton of iron." This line of reasoning will not result
+    in an economy that can reproduce itself.
   - *Static Equilibrium Assumption.*
     This implicitly assumes we are working in a static equilibrium. We
     have discussed the "static" bit with the assumption of annual
@@ -81,7 +94,16 @@
 (3/15) qr. wheat + (2/7) t. iron + (2/10) pigs \to 1 t. iron
 (4/15) qr. wheat + (1/7) t. iron + (5/10) pigs \to 1 pig
   #+END_VERSE
-- Then we just use linear algebra to solve this as usual.
+  Then we just use linear algebra to solve this as usual.
+- Observe this is the same thing as finding the null space 
+  #+BEGIN_VERSE
+(-7/15) qr. wheat + (4/7) t. iron + (3/10) pigs = 0
+(3/15) qr. wheat - (5/7) t. iron + (2/10) pigs = 0
+(4/15) qr. wheat + (1/7) t. iron - (5/10) pigs = 0
+  #+END_VERSE
+  which has a one-parameter family of solutions. But we care about the
+  /relative/ values, e.g., how many tons of iron is exchanged for how
+  many pigs.
 *** <<section_3>>3. General Case
 - We have commodities of different "species" (e.g., iron, wheat,
   etc.). Lower case variables will keep track of each species /a/, /b/,
@@ -1533,22 +1555,404 @@ multipliers! We will enumerate the steps in Sraffa's proof...
 
 * Part II. Multiple-Product Industries and Fixed Capital
 ** Ch. 7. Joint Production
+- Sraffa notes (in a footnote) that chapters 7, 8, and 9 are all needed
+  for the discussion in chapter 10 and 11. Should the reader find these
+  details too boring and/or abstract, Sraffa advises the reader to move
+  ahead to chapter 10 and 11, then return back to 7 later. (The idea is
+  that fixed capital, like machinery, its persistence will be treated by
+  having the machine be an "output" when used (and not broken). Its
+  "aging" is handled in this manner. Similar treatment for land could be
+  considered.)
 *** <<section_50>>50. Two methods of production for two joint products; or, one method for producing them and two methods for using them in the production of a third commodity
+- So far, each industry produces exactly 1 species of commodity. "Joint
+  production" changes the situation to allow 1 industry to produce 2 or
+  more species of commodities.
+  - Non-Example: Before we might have 32 t. steel + 300 qr. wheat -> 1000 qr wheat.
+  - Example: Joint production now would be something like,
+    100 barrels of crude oil + 32 units labor -> 1000 l. kerosene + 3200 l. gasoline
+  - Example: producing mutton and wool.
+  - Example: producing wheat and straw.
+- Sraffa also notes we will want to think of these equations as
+  describing /processes/, at least in the present context.
+- *Claim:* The conditions are no longer sufficient to determine
+  prices. There would be more prices to be determined than there are
+  processes ("more variables than equations"), hence the system is
+  under-determined.
+- Sraffa now pivots to consider /two/ different methods of producing
+  joint products.
+- *Assume.* We have two different methods of jointly producing two
+  commodities in different proportions.
+  - We are assured this is not only possibly /but necessary/, if we want
+    the number of processes (equations) to equal the number of
+    commodities so the prices (variables) can be determined.
+  - *Assume Further:* In such cases, a second process or industry does
+    in fact exist.
+    - Footnote: The proportions which two commodities are produced by
+      any one method will generally differ from the proportion from
+      those in which they are required for use, Sraffa informs us,
+      specifically so a linear combination of these methods will yield
+      the desired quantity of these commodities.
+- *Objection:* This seems to imply there are two distinct methods of
+  production which yield different proportions (i.e., are not
+  "multiples" of each other). This seems to imply at least two
+  commensurately productive methods of production.
+  - There is no notion of "productiveness" yet. We cannot talk about one
+    method being "more productive" than another. At least, not before
+    prices are determined.
+- *Positivity Constraint on Assumption.* In addition to these two methods being
+  linearly independent equations, we have one economic constraint:
+  only those methods of production are practicable which (at the given
+  wage or rate of profits) do not involve other than positive prices.
+- The gist, with regards to price determination, is we need as many
+  production processes as there are commodity prices. (We need as many
+  equations as unknowns.)
+- *Conclusion:* We need as many equations as there are unknowns.
+
 *** <<section_51>>51. A system of universal joint products
+- The possibility of joint products forces us to revisit the whole /q/
+  construction.
+  - We will now assume joint production is the default case, as opposed
+    to the exception.
+- Consider a system of /k/ distinct processes. Each of which turns out,
+  in various proportions, the same /k/ products.
+  - This doesn't rule out the possibility of some of the products having
+    zero coefficient ("not being produced") in some processes.
+    - After all, it is not necessary for each of the basic products to be
+      used /directly/ as means of production by all the industries.
+  - The system of single-product industries may be viewed as a "special
+    case" of this more general setting.
+- A production-process is characterized by the proportions in which it
+  (1) uses and (2) produces, the various commodities.
+- Instead of distinguishing commodities using lowercase latin indices
+  '/a/', '/b/', ..., '/k/', we shall now arbitrarily assign numbers 1,
+  2, ..., /k/.
+  - *Inputs Notation.* Thus /A_{1}/, /B_{1}/, ..., /K_{1}/ will denote the quantities of
+    various goods '/a/', '/b/', ..., '/k/' used as means of production
+    in the first process.
+    
+    Similarly, /A_{2}/, /B_{2}/, ..., /K_{2}/ those used in the second process.
+    
+    And /A_{k}/, /B_{k}/, ..., /K_{k}/ those used up in the last process.
+  - *Outputs Notation.* The quantities of various goods produced by each
+    process will have their indices enclosed in parentheses:
+    /A_{(1)}/, /B_{(1)}/, ..., /K_{(1)}/ are produced in the first process;
+    /A_{(2)}/, /B_{(2)}/, ..., /K_{(2)}/ the products from the second;
+    ...;
+    /A_{(k)}/, /B_{(k)}/, ..., /K_{(k)}/ the last process produces.
+- In our new-fangled notation, we may write the joint-production
+  equations as:
+  
+  #+BEGIN_VERSE
+  (A_{1}p_{a} + B_{1}p_{b} + ... + K_{1}p_{k})(1 + r) + L_{1}w = A_{(1)}p_{a} + B_{(1)}p_{b} + ... + K_{(1)}p_{k}
+  (A_{2}p_{a} + B_{2}p_{b} + ... + K_{2}p_{k})(1 + r) + L_{2}w = A_{(2)}p_{a} + B_{(2)}p_{b} + ... + K_{(2)}p_{k}
+  . . . . . . . . . . . . . . . . . . .  . . . . . . .
+  (A_{k}p_{a} + B_{k}p_{b} + ... + K_{k}p_{k})(1 + r) + L_{k}w = A_{(k)}p_{a} + B_{(k)}p_{b} + ... + K_{(k)}p_{k}  
+  #+END_VERSE
 *** <<section_52>>52. Complications in constructing the Standard System
+- We can construct the Standard system as we did before (\sect[[section_33][33]]): find
+  a set of multipliers which (when applied to the /k/ production
+  equations) results in the quantity of each commodity in the aggregate
+  means of production of the system bearing to the quantity of the same
+  commodity in the aggregate product a ratio which is the same for all
+  industries, i.e., for any commodity /X/ we will have /X q_{x}/ divided
+  by the sum /X_{a}q_{a}/ + /X_{b}q_{b}/ + ... + /X_{k}q_{k}/ be the same
+  for all industries, namely (1 + /R/).
+  - Subject to the same constraint: /L_{a}q_{a}/ + ... + /L_{k}q_{k}/ = 1
+- We must make a detour, first, to simplify the system of equations we
+  are working with.
+
 ** Ch. 8. The Standard System with Joint Products
+- Reminder: The standard system (\sect[[section_26][26]]) is "the set of equations taken
+  in the proportions producing the standard commodity". This amounts to
+  starting with the system of equations (1+/R/) /Ap/ = /D/ /p/ (where
+  /D/ is the diagonal matrix of outputs), then transforming it into the
+  so-called "q-system" \sect[[section_33][33]], i.e., the system of equations
+  (1 + /R/) /A/^{T} /q/ = /D/ /q/.
+- Puzzle: how does this generalize when we let /D/ be arbitrary
+  (presumably diagonally dominant and with non-negative entries)?
 *** <<section_53>>53. Negative Multipliers: I. Proportions of Production Incompatible with Proportions of Use
+- Sraffa suggests, once we begin considering in detail how to construct
+  a Standard system with joint products, "it becomes obvious" some
+  multipliers may have to be negative.
+  - It isn't at all obvious to me, at first blush, why some multipliers
+    have to be negative...
+- Consider two products jointly produced by two different methods.
+  - Take some linear combination of these two processes, say: x f(A_{a}, B_{a}) + y g(A_{b}, B_{b})
+  - Then we can obtain a spectrum of outputs, since the proportion of
+    outputs produced from method /f/ differs from the proportion of
+    outputs produced from /g/.
+- Now suppose that, in both methods of production, the proportion of
+  '/a/' consumed (relative to the amount of '/b/' consumed) is *higher*
+  than the highest of the proportions in which it is produced.
+  - We say some process must enter the Standard system with a negative multiplier.
+  - However, whether this multiplier applies to the low producer or to a
+    high user of commodity '/a/' cannot be deduced /a priori/. We can
+    only discover it by the solution of the system.
 *** <<section_54>>54. Negative Multipliers: II. Basic and non-basic jointly produced.
+- Sraffa claims: the "most fertile ground" for negative multipliers is
+  among non-basic products.
+  - But we need to generalize the notion of "basics" to joint
+    production, which is done in \sect[[section_60][60]].
+- Illustrative example: consider two commodities (jointly produced in
+  different proportions by two processes). One of these will be
+  included in the Standard product while the other won't (we assume the
+  one excluded, we exclude because it doesn't enter the means of
+  production for any industry). So, the first is clearly basic, the
+  second commodity clearly non-basic.
+  - This results in a negative multiplier to the process producing
+    relatively more of the second commodity (the commodity *not*
+    entering the means of production), and a positive multiplier to the
+    other process.
+  - The two multipliers are proportioned so when the two equations are
+    added up, the two quantities produced of the non-basic exactly
+    cancel out. Meanwhile, a positive balance of its companion is
+    retained as a component of the Standard commodity.
 *** <<section_55>>55. Negative Multipliers: III. Special raw material
+- But we now have a puzzle: consider the example from the previous
+  section. Commodity '/a/' is basic, commodity '/b/' is non-basic. There
+  are two processes of production, call them "method 1" and "method
+  2". The first, method 1, has a negative multiplier.
+- What if there is a commodity produced, '/c/', which is an input only
+  to method 1? I.e., only to a method of production with a /negative/ multiplier?
+- It follows that the multiplier for the production of '/c/' would be
+  negative as well.
+  - Let me see if I can better understand this, the system of equations
+    for production is
+    #+BEGIN_VERSE
+    (/A/_{1} /p_{a}/ + /B/_{1} /p_{b}/ + /C/_{1} /p_{c}/) (1 + /r/) = /A/_{(1)} /p_{a}/ + /B/_{(1)} /p_{b}/
+    (/A/_{2} /p_{a}/ + /B/_{2} /p_{b}/) (1 + /r/) = /A/_{(2)} /p_{a}/ + /B/_{(2)} /p_{b}/
+    /C/_{3} /p_{c}/ (1 + /r/) = /C/_{(3)/ /p_{c}/
+    #+END_VERSE
+  - The /q/ system corresponding to this would naively be
+    #+BEGIN_VERSE
+    (1 + /R/) (/A/_{1} q_{1} + /A/_{2} /q/_{2}) = /A/_{(1)} q_{1} + /A/_{(2)} q_{2}
+    (1 + /R/) (/B/_{1} q_{1} + /B/_{2} /q/_{2}) = /B/_{(1)} q_{1} + /B/_{(2)} q_{2}
+    (1 + /R/) (/C/_{1} q_{1} + /C/_{3} /q/_{3}) = /C/_{(1)} q_{3}
+    #+END_VERSE
+    where we have established /q/_{1} \lt 0.
+  - I'm still uncertain if this necessarily implies q_{3} \lt 0...
 *** <<section_56>>56. Interpretation of negative components of the Standard commodity
+- We have no "naive" immediate understanding of "negative industries",
+  making it hard to interpret the Standard system as anything other than
+  a system of equations.
+- The only reason we introduced the Standard system in the first place
+  is to construct the Standard commodity!
+  - We have no difficulty interpreting negative coefficients in the
+    Standard commodity, Sraffa assures us, by appealing via analogy to
+    accounting concept (like liabilities or debts) while the positives
+    coefficients may be regarded as assets.
+- In short: the Standard commodity, which includes both positive and
+  negative quantities, can be adopted as money of account without it
+  being a stretch of the imagination.
 *** <<section_57>>57. Basics and non-basics, new definition required
+- Now, we have a different difficulty from the joint-product system,
+  which we need to consider before we construct the Standard commodity:
+  what's a basic commodity?
+- Previously, we used the criteria: does the commodity enter directly or
+  indirectly into the means of production for all commodities?
+- Now we have ambiguity. (Sraffa more dramatically states this criteria
+  now /fails/.)
+  - Each commodity is now produced by multiple industries.
+  - Let /X/ be some species of commodity.
+  - But what if a commodity /Y/ doesn't enter /all/ production processes for
+    producing /X/? There are some processes which consume /Y/ and there
+    are others which do not. Does /Y/ meet the criteria for being basic?
+  - Footnote: Sraffa tells us the "trouble, however, lies deeper", which
+    he promises us will be discussed in \sect[[section_59][59]].
+- This uncertainty extends to the question whether a commodity (our /Y/) did or
+  did not enter "indirectly [into]" the production of commodities into
+  which /X/ enters as means of production.
 *** <<section_58>>58. Three types of non-basics
+- Sraffa now generalizes the previous discussion of non-basic
+  commodities from \sect[[section_35][35]]. The three types of non-basic commodities:
+  1. Products which do not enter into the means of production for /any/
+     of the industries. (This could immediately be removed from the
+     system, actually.)
+  2. Products which enter only /its own/ means of production.
+     - This would generalize in the joint system as a commodity which
+       enters the means of production for each of the processes which it
+       is itself produced, and no others.
+     - The only constraint is that the ratio of the amount of this
+       commodity produced to the amount consumed as input is constant
+       for all these different processes. So, if /X/ is such a
+       commodity, then /X/_{(/i/)} / /X/_{/i/} for each production
+       process /i/ is a constant /c/ (not dependent on the process).
+  3. Products which enter the means of production of an interconnected
+     group of non-basics. That is to say, we have a sort of sub-system
+     of non-basics.
+- *Notation.* We will examine the third type of generalization of "basic
+  commodities". To do this, we study a multiple system of /k/ processes,
+  supposing the inter-connected group consists of three products ('a',
+  'b', and 'c'). That is to say, we /fix/ these products as non-basic,
+  and we have the rest of the economy be basic.
+  
+  We arrange the quantities (in which these commodities
+  enter) into a row. Thus we obtain /k/ rows ordered in 6 columns (2
+  blocks of 3 columns really) as follows:
+  \[
+  \begin{matrix}
+  A_{1} & B_{1} & C_{1} & A_{(1)} & B_{(1)} & C_{(1)} \\
+  A_{2} & B_{2} & C_{2} & A_{(2)} & B_{(2)} & C_{(2)} \\
+  \dots & \dots & \dots & \dots   & \dots   & \dots   \\ 
+  A_{k} & B_{k} & C_{k} & A_{(k)} & B_{(k)} & C_{(k)} \\
+  \end{matrix}
+  \]
+  - Footnote: "Some of these quantities may of course be zero." But how
+    many? I mean, does it have to be rank 3?
+- *Criteria.* The conditions for three products being non-basic is that
+  "not more than three of the rows should be independent, the other rows
+  being obtainable from combinations of those three rows formed after
+  giving them suitable multipliers."
+  - Spoiler alert: This turns out to be too strict, we generalize it in \sect[[section_60][60]]. 
 *** <<section_59>>59. Example of the third type
+- We are told the third type of non-basic commodities "may give rise to
+  curiously intricate patterns." Lets see the possible directions.
+- Example: there are four processes and four products.
+  - Two commodities, 'b' and 'c', are jointly produced by /one/ process,
+    and no other process produces either 'b' or 'c' (either singly or jointly).
+  - The commodity 'b' does not enter into the production of any commodity.
+  - But the commodity 'c' enters the means of /all/ four processes.
+  - Suppose the production process producing 'b' and 'c' are represented
+    by the equation
+    \[(A_{1}p_{a} + C_{1}p_{c} + K_{1}p_{k})(1+r) + L_{1}w =
+    A_{(1)}p_{a} + B_{(1)}p_{b} + C_{(1)}p_{c} + K_{(1)}p_{k}\]
+  - The "rows" for the two commodities will be
+    \[
+    \begin{matrix}
+    0 & C_{1} & B_{(1)} & C_{(1)}\\
+    0 & C_{2} & 0       & 0      \\
+    0 & C_{3} & 0       & 0      \\
+    0 & C_{4} & 0       & 0      
+    \end{matrix}
+    \]
+    - Only the first row /and/ any one of the remaining three are
+      independent. The remaining two rows are a constant multiple of the
+      latter. Hence 'b' and 'c' are non-basic (by the third criteria).
+- Now that we've established our example, lets examine it from the
+  perspective of constructing the Standard system.
+  - Claim: 'b' is incapable of entering the Standard commodity. (This
+    should be obvious...by our discussion of the three possible
+    definitions for non-basic commodities...)
+  - Consequence: we must eliminate 'b' from the Standard system.
+  - The only way to do this is to make the multiplier \(q_{1}\) for the
+    first process vanish (i.e., set to zero).
+  - However, that process was the only producer for 'c' commodities.
+  - Hence 'c' must be eliminated.
+    - We do this by subtracting one of the remaining equations from each
+      of the others (after giving it --- in each case --- an appropriate
+      multiplier resulting in cancellation of every quantity of 'c').
 *** <<section_60>>60. General definition.
+- Although the definition just given is less (economically) intuitive
+  than "entering (or not) the means of production for all commodities"
+  which it replaces, it has the advantage of greater generality.
+- We can see, however, from the previous example that the first two
+  candidate definitions (of \sect[[section_58][58]]) are special cases of the third.
+  - Further, the definition covers the three types of single-products systems.
+  - Sraffa notes this new definition includes a new class of commodity
+    which enters the means of production but is not produced: land.
+- *Criteria.*
+  In a system of /k/ productive processes and /k/ commodities (no matter
+  whether produced singly or jointly) we say that a commodity --- or
+  more generally, /n/ linked commodities (where /n/ must be smaller than
+  /k/ and may be equal to 1) --- are "Non-Basic" if of the /k/ rows
+  (formed by the \(2n\) quantities in which they appear in each process)
+  not more than /n/ rows are independent, the others being linear
+  combinations of these.
+  - Footnote: Sraffa explains, "In the language of lagebra, the matrix
+    of /k/ rows and \(2n\) columns is of rank less than, or equal to, /n/."
+  - So if we have \((1 + R)A\vec{p} = B\vec{p}\), then the matrix
+    \(B^{-1}A\) is indecomposable if there are no non-basic
+    products. (See Bertram Schefold's "Joint production: Triumph of
+    Economic overMathematical logic?" /Euro. J. History of Economic
+    Thought/ *12* no.3 (2005) 525--552.)
+  - If \(C = (A|B)\) is a matrix in block form, and \(C_{(k)}\) is
+    obtained by setting all columns to zero except the /k/ and \(n+k\)
+    column, then \(\mathrm{rank}(C_{(k_{1})} + \dots + C_{(k_{n})})\leq n\)
+    if the /n/ products are non-basic.
+  - Puzzle: if \(k_{1}\), ..., \(k_{n}\) form a non-basic commodity,
+    then will any subset of these products form a non-basic commodity?
+  - The condition says ratio obtained by the amount used as input to the
+    amount produced is the same for all industries. If no industry uses
+    the commodity as means of production (or, conversely, no industry
+    /produces/ it), then it qualifies as a non-Basic.
+- All commodities which do not satisfy this condition are *Basic*.
+  - NB: as has been said in \sect[[section_6][6]], every system is assumed to include
+    at least one basic product.
 *** <<section_61>>61. Elimination of non-basics.
+- We can use linear transformations to eliminate the non-basic
+  commodities from the system (both on the side of the means of
+  production, and on the side of products).
+  - I.e., we can find a set of multipliers (some positive, some
+    negative) which applied to the original /k/ equations make it
+    possible to combine them into a smaller number of equations.
+  - The smaller set of equations (equal in number to the number of
+    basic products) in each of which any quantity of non-basic is
+    cancelled by an equal quantity of opposite sign, i.e., the only
+    nonzero quantities are basic commodities.
+- This yields the same result as we obtained in the single-products
+  system by the "much simpler method" of dropping equations for
+  non-basic commodities (\sect[[section_35][35]]).
 *** <<section_62>>62. The system of Basic equations
+- If the number of basic products is /j/, the system thus obtained will
+  consist of /j/ equations. These may be called as the *"Basic
+  equations"*.
+- Suppose the /j/ basic commodities are 'a', 'b', ..., 'k', we shall
+  denote the /net quantities/ in which they appear in a Basic equation
+  by the barred letters \(\bar{A}\), \(\bar{B}\), ..., \(\bar{J}\) to
+  distinguish them from the quantities in the original equations.
+- The Basic equations will accordingly be:
+  \[
+  \begin{matrix}
+  (\bar{A}_{1}p_{a} + \bar{B}_{1}p_{b} + \dots + \bar{J}_{1}p_{j})(1 + r)
+  + \bar{L}_{1}w = \bar{A}_{(1)}p_{a} + \bar{B}_{(1)}p_{b} + \dots + \bar{J}_{(1)}p_{j}\\
+  (\bar{A}_{2}p_{a} + \bar{B}_{2}p_{b} + \dots + \bar{J}_{2}p_{j})(1 + r)
+  + \bar{L}_{2}w = \bar{A}_{(2)}p_{a} + \bar{B}_{(2)}p_{b} + \dots + \bar{J}_{(2)}p_{j}\\
+  \dots \dots \dots \dots \dots \dots &\dots \dots \dots\\
+  (\bar{A}_{j}p_{a} + \bar{B}_{j}p_{b} + \dots + \bar{J}_{j}p_{j})(1 + r)
+  + \bar{L}_{j}w = \bar{A}_{(j)}p_{a} + \bar{B}_{(j)}p_{b} + \dots + \bar{J}_{(j)}p_{j}
+  \end{matrix}
+  \]
+- This system is equivalent to the original, in the sense that it
+  determines /R/ and the prices for the original system as well.
+- The differences from the original system, besides excluding
+  non-Basics, are twofold:
+  1. A basic equation does not represent a productive process, it is
+     merely the result of combining equations of a number of processes.
+  2. It may contain negative quantities, as well as positive quantities.
 *** <<section_63>>63. Construction of the Standard system
+- The Basic equations are designed for the construction of the Standard
+  product.
+  - Footnote: It would have been possible to construct the Standard
+    commodity directly from the original equations, and the final result
+    would have been the same. Sraffa explains why he thought it seemed
+    simpler to go through the intermediate step of the Basic equations
+    in appendix C.
+- The multipliers /q/ which are applied to the /j/ Basic equations give
+  the Standard system:
+  \[
+  \begin{matrix}
+  (\bar{A}_{1}q_{1} + \bar{A}_{2}q_{2} + \dots + \bar{A}_{j}q_{j})(1 + R) = 
+   \bar{A}_{(1)}q_{1} + \bar{A}_{(2)}q_{2} + \dots + \bar{A}_{(j)}q_{j}\\
+  (\bar{B}_{1}q_{1} + \bar{B}_{2}q_{2} + \dots + \bar{B}_{j}q_{j})(1 + R) = 
+   \bar{B}_{(1)}q_{1} + \bar{B}_{(2)}q_{2} + \dots + \bar{B}_{(j)}q_{j}\\
+  \dots \dots \dots \dots \dots \dots \dots \dots \dots\\
+  (\bar{J}_{1}q_{1} + \bar{J}_{2}q_{2} + \dots + \bar{J}_{j}q_{j})(1 + R) = 
+   \bar{J}_{(1)}q_{1} + \bar{J}_{(2)}q_{2} + \dots + \bar{J}_{(j)}q_{j}
+  \end{matrix}
+  \]
+- In matrix form, this is \((1 + R)\bar{A}^{T}\vec{q} =
+  \bar{B}^{T}\vec{q}\) from the original equations \((1 +
+  r)\bar{A}\vec{p} + \vec{L}w = \bar{B}\vec{p}\).
+- Sraffa says, "The equations may give an equation for /R/ of the /j/-th
+  degree," which I think he means \((1 + R)\bar{A}^{T}\vec{q} =
+  \bar{B}^{T}\vec{q}\) gives us \([(1 + R)\bar{A}^{T} - \bar{B}^{T}]\vec{q} =
+  0\) hence \([(1 + R)\bar{A}^{T} - \bar{B}^{T}]\) is a singular matrix,
+  and the characteristic polynomial \(f(R) = \det((1 + R)\bar{A}^{T} - \bar{B}^{T})\)
+  may be solved for the /j/ possible values for /R/.
+  - Each value for /R/ has a corresponding eigenvector \(\vec{q}\), each
+    represents a different Standard Commodity.
 *** <<section_64>>64. Only the lowest value of /R/ economically significant 
+
 *** <<section_65>>65. Tax on non-basic product leaves rate of profits and prices of other products unaffected
 ** Ch. 9. Other Effects of Joint Production
 *** <<section_66>>66. Quantity of labor embodied in two commodities jointly produced by two processes
